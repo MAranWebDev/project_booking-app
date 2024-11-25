@@ -18,16 +18,16 @@
 
 ## Requerimientos
 
-- responsive design - ok (tailwind vs mui)
+- responsive design - ok (mui)
 - env - ok
 - traducciones - ok (i18next)
-- local storage - ok (zustand or vanilla)
+- local storage - ok (zustand/vanilla)
 - validaciones - ok (react-hook-form+zod)
-- api base de datos (next vs express)
+- api base de datos (mongoose)
 
 - constraseñas hasheadas (bcrypt)
 - registro de usuarios
-- autenticación de usuarios
+- autenticación de usuarios (next auth)
 - roles de usuarios
 - paginas protegidas
 
