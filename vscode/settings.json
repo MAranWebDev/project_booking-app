@@ -32,6 +32,9 @@
     "*.env.*": "env"
   },
 
+  // Tailwind
+  "css.lint.unknownAtRules": "ignore",
+
   // Vscode customization
   "explorer.compactFolders": false,
   "workbench.iconTheme": "material-icon-theme",
