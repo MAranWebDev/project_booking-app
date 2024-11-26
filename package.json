@@ -3,15 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "clean:folders": "find . \\( -name 'node_modules' -o -name '.next' \\) -exec rm -rf {} +",
+    "clean:files": "find . \\( -name 'package-lock.json' -o -name 'pnpm-lock.yaml' -o -name '*.tsbuildinfo' \\) -exec rm -f {} +",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "clean:builds": "find . -name 'dist' -exec rm -rf {} +",
-    "clean:folders": "find . -name 'node_modules' -exec rm -rf {} +",
-    "clean:files": "find . \\( -name 'package-lock.json' -o -name 'pnpm-lock.yaml' -o -name '*.tsbuildinfo' \\) -exec rm -f {} +",
     "prettier": "prettier --write \"**/*.{ts,tsx}\"",
-    "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/cache": "^11.13.5",
