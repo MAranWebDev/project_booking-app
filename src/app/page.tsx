@@ -30,10 +30,11 @@ export default function Page() {
 
       <div className="image-frame">
         <Image
+          style={{ objectFit: 'cover' }}
           src={imagen}
           alt="Imagen"
-          layout="responsive"
-          objectFit="cover"
+          width={3000}
+          height={1686}
           quality={100}
         />
 
