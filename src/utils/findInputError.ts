@@ -18,5 +18,5 @@ export const findInputError = (
     .filter((key) => key.includes(name))
     .reduce((cur, key) => Object.assign(cur, { error: errors[key] }), {});
 
-  return filtered;
+  return filtered as { error: { message: string } };
 };
