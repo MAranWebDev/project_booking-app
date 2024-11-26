@@ -1,4 +1,4 @@
-# Booking App
+# Proyecto de Diseño de Software 2024. Página para gestión de salud mental en el trabajo
 
 ## Requisitos
 

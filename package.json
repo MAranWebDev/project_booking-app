@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "clean:builds": "find . -name 'dist' -exec rm -rf {} +",
-    "clean:folders": "find . -name 'node_modules' -exec rm -rf {} +",
-    "clean:files": "find . \\( -name 'package-lock.json' -o -name 'pnpm-lock.yaml' -o -name '*.tsbuildinfo' \\) -exec rm -f {} +",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "clean:builds": "find . -name 'dist' -exec rm -rf {} +",
+    "clean:folders": "find . -name 'node_modules' -exec rm -rf {} +",
+    "clean:files": "find . \\( -name 'package-lock.json' -o -name 'pnpm-lock.yaml' -o -name '*.tsbuildinfo' \\) -exec rm -f {} +",
     "prettier": "prettier --write \"**/*.{ts,tsx}\"",
+    "lint": "next lint",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -21,19 +21,25 @@
     "@mui/icons-material": "^6.1.8",
     "@mui/material": "^6.1.8",
     "@mui/material-nextjs": "^6.1.8",
-    "mongoose": "^8.8.2",
+    "classnames": "^2.5.1",
+    "framer-motion": "^11.11.17",
+    "mongoose": "^8.8.3",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106"
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react-hook-form": "^7.53.2",
+    "react-icons": "^5.3.0",
+    "sweetalert2": "^11.14.5",
+    "vite": "^6.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.9.3",
+    "@types/node": "^22.10.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.0.3",
     "postcss": "^8.4.49",
-    "prettier": "3.3.3",
+    "prettier": "3.4.1",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.7.2"
   }
