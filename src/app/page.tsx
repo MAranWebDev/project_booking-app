@@ -1,7 +1,43 @@
-export default function Home() {
+import imagen from '@/assets/images/imagen.jpg';
+import logo from '@/assets/images/logo.png';
+import NavBar from '@/components/navbar';
+import Image from 'next/image';
+
+// Direct imports
+import '@/assets/styles/styles.css';
+
+export default function Page() {
   return (
-    <main>
-      <h1>Hello World</h1>
-    </main>
+    <div className="container">
+      <header className="Header">
+        <div className="logo-header">
+          <Image src={logo} alt="Logo" width={60} height={60} />
+        </div>
+      </header>
+      <NavBar></NavBar>
+      <div className="login-box">
+        <div className="logo">
+          <Image src={logo} alt="Logo" width={150} height={150} />
+        </div>
+        <form>
+          <input type="text" placeholder="Usuario" />
+          <input type="password" placeholder="Contraseña" />
+          <button type="submit">Ingresar</button>
+        </form>
+      </div>
+      <div className="image-frame">
+        <Image
+          src={imagen}
+          alt="Imagen"
+          layout="responsive"
+          objectFit="cover"
+          quality={100}
+        />
+        <div className="button-container">
+          <button className="action-button">¿Necesitas Hablar?</button>
+          <button className="action-button">Guías de Ayuda</button>
+        </div>
+      </div>
+    </div>
   );
 }
