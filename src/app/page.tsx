@@ -1,6 +1,6 @@
 import imagen from '@/assets/images/imagen.jpg';
 import logo from '@/assets/images/logo.png';
-import NavBar from '@/components/navbar';
+import { Navbar } from '@/components/navbar';
 import Image from 'next/image';
 
 // Direct imports
@@ -15,7 +15,7 @@ export default function Page() {
         </div>
       </header>
 
-      <NavBar></NavBar>
+      <Navbar></Navbar>
 
       <div className="login-box">
         <div className="logo">
