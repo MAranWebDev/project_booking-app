@@ -1,4 +1,3 @@
-// Libs
 import { MuiProvider } from '@/libs/mui/mui-provider';
 import { robotoFont } from '@/libs/mui/robot-font';
 import type { Metadata } from 'next';
