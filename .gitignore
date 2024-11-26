@@ -39,5 +39,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Custom files
+# Custom
 *.tsbuildinfo
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
