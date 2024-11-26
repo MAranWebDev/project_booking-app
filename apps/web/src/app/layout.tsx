@@ -1,8 +1,10 @@
+// Libs
+import { MuiProvider } from '@/libs/mui/mui-provider';
+import { robotoFont } from '@/libs/mui/robot-font';
+import type { Metadata } from 'next';
+
 // Direct imports
 import '@/assets/styles/globals.css';
-
-// Libs
-import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={robotoFont.variable}>
+        <MuiProvider>{children}</MuiProvider>
+      </body>
     </html>
   );
 }
