@@ -10,6 +10,8 @@ export const MuiProvider = ({ children }: PropsWithChildren) => {
       <ThemeProvider theme={theme}>
         {/* Normalize css */}
         <CssBaseline />
+
+        {/* Rest of the app */}
         {children}
       </ThemeProvider>
     </AppRouterCacheProvider>
