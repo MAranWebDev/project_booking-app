@@ -14,7 +14,9 @@ export default function Page() {
           <Image src={logo} alt="Logo" width={60} height={60} />
         </div>
       </header>
+
       <NavBar></NavBar>
+
       <div className="login-box">
         <div className="logo">
           <Image src={logo} alt="Logo" width={150} height={150} />
@@ -25,6 +27,7 @@ export default function Page() {
           <button type="submit">Ingresar</button>
         </form>
       </div>
+
       <div className="image-frame">
         <Image
           src={imagen}
@@ -33,6 +36,7 @@ export default function Page() {
           objectFit="cover"
           quality={100}
         />
+
         <div className="button-container">
           <button className="action-button">¿Necesitas Hablar?</button>
           <button className="action-button">Guías de Ayuda</button>
