@@ -2,9 +2,6 @@ import mongoose from 'mongoose';
 
 import { MONGODB_URI } from '@/config/env';
 
-// Validate env
-if (!MONGODB_URI) throw new Error('MONGODB_URI must be defined');
-
 export const dbConnect = async () => {
   try {
     // Establish the database connection
