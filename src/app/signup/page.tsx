@@ -8,17 +8,18 @@
 
 'use client';
 
-import { Input } from '@/components/Input';
-import {
-  email_validation,
-  name_validation,
-  password_validation,
-} from '@/utils/inputValidations';
 import { useState } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { BsFillCheckSquareFill } from 'react-icons/bs';
 import { GrMail } from 'react-icons/gr';
 import Swal from 'sweetalert2';
+
+import { Input } from '@/components/input';
+import {
+  email_validation,
+  name_validation,
+  password_validation,
+} from '@/utils/input-validations';
 
 // Direct imports
 import '@/assets/styles/styles.css';

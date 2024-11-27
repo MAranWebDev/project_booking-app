@@ -1,7 +1,8 @@
+import Image from 'next/image';
+
 import imagen from '@/assets/images/imagen.jpg';
 import logo from '@/assets/images/logo.png';
 import { Navbar } from '@/components/navbar';
-import Image from 'next/image';
 
 // Direct imports
 import '@/assets/styles/styles.css';
