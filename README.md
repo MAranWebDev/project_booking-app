@@ -1,6 +1,6 @@
-# Proyecto de Diseño de Software 2024. Página para gestión de salud mental en el trabajo
+# Proyecto de Diseño de Software 2024: Página para gestión de salud mental en el trabajo
 
-## Requisitos
+## Requerimientos
 
 1. Responsive Design: Móvil/Tablet/Desktop, respetando material design
 2. Traducciones: Idiomas inglés/español
@@ -16,20 +16,22 @@
 
 6. Funcionalidad adicional: Funcionalidad adicional como carga y visualización de datos.
 
-## Requerimientos
+## Status
 
-- responsive design - ok (mui)
-- env - ok
-- traducciones - ok (i18next)
-- local storage - ok (zustand/vanilla)
-- validaciones - ok (react-hook-form+zod)
-- api base de datos (mongoose)
+1. responsive design - ok
+2. traducciones - pendiente
+3. local storage - pendiente
+4. validaciones - pendiente
+5. usuarios:
 
-- constraseñas hasheadas (bcrypt)
-- registro de usuarios
-- autenticación de usuarios (next auth)
-- roles de usuarios
-- paginas protegidas
+   - registro de usuarios - pendiente
+   - login de usuarios - pendiente
+   - variables de entorno - ok
+   - pagina protegida - pendiente
+   - constraseñas encriptadas - pendiente
+   - api base de datos - ok
 
-- agendar consultas
-- visualizar consultas
+6. funcionalidad adicional:
+
+   - agendar tus consultas - pendiente
+   - visualizar tus consultas - pendiente
