@@ -6,13 +6,12 @@
 |  🐸 Returns:  JSX
 *-------------------------------------------------------------------*/
 
+import { findInputError } from '@/utils/find-input-error';
+import { isFormInvalid } from '@/utils/is-form-invalid';
 import cn from 'classnames';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useFormContext } from 'react-hook-form';
 import { MdError } from 'react-icons/md';
-
-import { findInputError } from '@/utils/find-input-error';
-import { isFormInvalid } from '@/utils/is-form-invalid';
 
 // Types
 type Props = {

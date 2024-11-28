@@ -1,8 +1,7 @@
-import mongoose from 'mongoose';
-import { NextResponse } from 'next/server';
-
 import { dbConnect } from '@/libs/mongoose/db-connect';
 import { User } from '@/libs/mongoose/models';
+import mongoose from 'mongoose';
+import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
   const { name, email, password } = await req.json();
