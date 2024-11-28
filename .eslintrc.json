@@ -12,26 +12,6 @@
       { "patterns": ["src", "../**", "@/*/*/*/*", "./*/*/*/*"] }
     ],
 
-    // "eslint-config-next": To sort imports.
-    "import/order": [
-      "error",
-      {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index",
-          "object"
-        ],
-        "pathGroups": [
-          { "pattern": "@/**", "group": "external", "position": "after" }
-        ],
-        "newlines-between": "always"
-      }
-    ],
-
     // "eslint-plugin-check-file": To force naming conventions.
     "check-file/folder-naming-convention": [
       "error",

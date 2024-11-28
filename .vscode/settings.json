@@ -19,6 +19,9 @@
   "[env]": {
     "editor.defaultFormatter": "IronGeek.vscode-env"
   },
+  "[properties][ignore][shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
   "[dockercompose][dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
@@ -28,9 +31,6 @@
     ".env": "env",
     "*.env.*": "env"
   },
-
-  // Tailwind
-  "css.lint.unknownAtRules": "ignore",
 
   // Vscode customization
   "explorer.compactFolders": false,
