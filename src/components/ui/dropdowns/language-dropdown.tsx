@@ -10,7 +10,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Typography from '@mui/material/Typography';
 import { useLocale, useTranslations } from 'next-intl';
 
-export const LocaleSwitcher = () => {
+export const LanguageDropdown = () => {
   const t = useTranslations('LocaleSwitcher');
   const currentLocale = useLocale();
 
@@ -19,23 +19,20 @@ export const LocaleSwitcher = () => {
     { value: 'es', label: t('es') },
   ];
 
-  // const currentLanguage = i18n.resolvedLanguage;
-
   // Utils
   const handleChange = (event: SelectChangeEvent) =>
     setUserLocale(event.target.value as Locale);
 
   return (
-    <FormControl fullWidth>
-      <InputLabel id="select-label">{t('label')}</InputLabel>
-
+    <FormControl>
+      <InputLabel id="select-label">{t('label')}</InputLabel>/
       <Select
         labelId="select-label"
         id="select"
         name="select"
         value={currentLocale}
         onChange={handleChange}
-        label={t('language')}
+        label={t('label')}
       >
         {LANGUAGES.map(({ value, label }) => (
           <MenuItem key={value} value={value}>
