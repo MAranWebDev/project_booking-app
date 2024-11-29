@@ -1,11 +1,10 @@
+import '@/assets/styles/globals.css';
 import { MuiProvider } from '@/libs/mui/mui-provider';
 import { robotoFont } from '@/libs/mui/robot-font';
+import { NextAuthProvider } from '@/libs/next-auth/next-auth-provider';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
-
-// Direct imports
-import '@/assets/styles/globals.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -26,7 +25,11 @@ export default async function RootLayout({
       <body className={robotoFont.variable}>
         {/* "next-intl" */}
         <NextIntlClientProvider messages={messages}>
-          <MuiProvider>{children}</MuiProvider>
+          {/* "mui" */}
+          <MuiProvider>
+            {/* "next-auth" */}
+            <NextAuthProvider>{children}</NextAuthProvider>
+          </MuiProvider>
         </NextIntlClientProvider>
       </body>
     </html>
