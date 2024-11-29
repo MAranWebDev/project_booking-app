@@ -19,16 +19,16 @@
 ## Status
 
 1. responsive design - ok
-2. traducciones - pendiente
+2. traducciones - ok
 3. local storage - pendiente
-4. validaciones - pendiente
+4. validaciones - ok
 5. usuarios:
 
-   - registro de usuarios - pendiente
-   - login de usuarios - pendiente
+   - registro de usuarios - ok
+   - login de usuarios - ok
    - variables de entorno - ok
-   - pagina protegida - pendiente
-   - constraseñas encriptadas - pendiente
+   - pagina protegida - ok
+   - constraseñas encriptadas - ok
    - api base de datos - ok
 
 6. funcionalidad adicional:

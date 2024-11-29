@@ -7,7 +7,6 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 
 // Types
 interface CustomUser {
-  _id: string;
   email: string;
   name: string;
 }

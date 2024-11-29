@@ -5,7 +5,7 @@ import bcrypt from 'bcryptjs';
 import mongoose from 'mongoose';
 import { NextResponse } from 'next/server';
 
-export async function POST(req: Request) {
+export const POST = async (req: Request) => {
   try {
     // Parse and validate request body
     const body = await req.json();
@@ -42,4 +42,4 @@ export async function POST(req: Request) {
         : 'Internal Server Error';
     return NextResponse.json({ message }, { status });
   }
-}
+};

@@ -23,14 +23,12 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={robotoFont.variable}>
-        {/* "next-intl" */}
-        <NextIntlClientProvider messages={messages}>
-          {/* "mui" */}
-          <MuiProvider>
-            {/* "next-auth" */}
+        <MuiProvider>
+          {/* "next-intl" */}
+          <NextIntlClientProvider messages={messages}>
             <NextAuthProvider>{children}</NextAuthProvider>
-          </MuiProvider>
-        </NextIntlClientProvider>
+          </NextIntlClientProvider>
+        </MuiProvider>
       </body>
     </html>
   );

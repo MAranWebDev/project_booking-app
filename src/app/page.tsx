@@ -1,7 +1,7 @@
 import { LanguageDropdown } from '@/components/ui/dropdowns';
 import { useTranslations } from 'next-intl';
 
-export default function Page() {
+export default function RootPage() {
   const t = useTranslations('HomePage');
 
   return (
