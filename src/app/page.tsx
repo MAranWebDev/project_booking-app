@@ -1,10 +1,8 @@
 import imagen from '@/assets/images/imagen.jpg';
 import logo from '@/assets/images/logo.png';
+import '@/assets/styles/styles.css';
 import { Navbar } from '@/components/ui/headers';
 import Image from 'next/image';
-
-// Direct imports
-import '@/assets/styles/styles.css';
 
 export default function Page() {
   return (
@@ -17,8 +15,8 @@ export default function Page() {
 
       <Navbar></Navbar>
 
-      <div className="login-box">
-        <div className="logo">
+      <div>
+        <div>
           <Image src={logo} alt="Logo" width={150} height={150} />
         </div>
         <form>

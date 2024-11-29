@@ -18,9 +18,6 @@ export const Navbar = async () => {
         ) : (
           <>
             <li>
-              <Link href="/about">About</Link>
-            </li>
-            <li>
               <Link href="/">Signin</Link>
             </li>
             <li>
