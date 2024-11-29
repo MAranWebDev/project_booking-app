@@ -1,3 +1,3 @@
 export async function GET() {
-  return Response.json({ message: 'Hello API' });
+  return Response.json({ message: 'Hello Next API!' });
 }
