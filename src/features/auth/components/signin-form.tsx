@@ -1,6 +1,6 @@
 'use client';
 
-import { usersZodSignup, UsersZodSignup } from '@/libs/zod/schemas';
+import { usersZodSignin, UsersZodSignin } from '@/libs/zod/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
@@ -14,12 +14,12 @@ export const SignupForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<UsersZodSignup>({
-    resolver: zodResolver(usersZodSignup),
+  } = useForm<UsersZodSignin>({
+    resolver: zodResolver(usersZodSignin),
   });
 
   // Utils
-  const onSubmit = (inputs: UsersZodSignup) => {
+  const onSubmit = (inputs: UsersZodSignin) => {
     console.log(inputs);
   };
 
@@ -30,12 +30,6 @@ export const SignupForm = () => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <Stack spacing={2}>
-        <TextField
-          label="Name"
-          error={!!errors.name}
-          helperText={errors.name?.message}
-          {...register('name')}
-        />
         <TextField
           label="Email"
           error={!!errors.email}
@@ -50,7 +44,7 @@ export const SignupForm = () => {
         />
 
         <Button variant="contained" type="submit">
-          Signup
+          Signin
         </Button>
       </Stack>
     </Paper>

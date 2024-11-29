@@ -1,72 +1,73 @@
-/*-------------------------------------------------------------------
-|  🐼 React FC Form
-|
-|  🦝 Todo: CREATE AN AWESOME AND MAINTAINABLE FORM COMPONENT
-|
-|  🐸 Returns:  JSX
-*-------------------------------------------------------------------*/
-
 'use client';
 
-import { Input } from '@/components/input';
-import {
-  email_validation,
-  name_validation,
-  password_validation,
-} from '@/utils/input-validations';
-import { useState } from 'react';
-import { FormProvider, useForm } from 'react-hook-form';
-import { BsFillCheckSquareFill } from 'react-icons/bs';
-import { GrMail } from 'react-icons/gr';
-import Swal from 'sweetalert2';
+import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+import { FormEvent, useState } from 'react';
 
-// Direct imports
-import '@/assets/styles/styles.css';
+export default function SignupPage() {
+  const [error, setError] = useState<string | undefined>();
+  const router = useRouter();
 
-export default function Signup() {
-  const methods = useForm();
-  const [success, setSuccess] = useState(false);
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    try {
+      const formData = new FormData(event.currentTarget);
 
-  const onSubmit = methods.handleSubmit((data) => {
-    console.log(data);
-    methods.reset();
-    setSuccess(true);
-    Swal.fire({
-      icon: 'success',
-      title: 'Enviado',
-      text: 'Registro exitoso',
-    });
-  });
+      const response = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formData.get('email'),
+          password: formData.get('password'),
+          fullname: formData.get('fullname'),
+        }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.message || 'Signup failed');
+      }
+
+      const signupResponse = await response.json();
+
+      const res = await signIn('credentials', {
+        email: signupResponse.email,
+        password: formData.get('password') as string,
+        redirect: false,
+      });
+
+      if (res?.ok) return router.push('/dashboard/profile');
+    } catch (error) {
+      setError(
+        error instanceof Error ? error.message : 'An unexpected error occurred',
+      );
+    }
+  };
 
   return (
-    <FormProvider {...methods}>
-      <form
-        onSubmit={(e) => e.preventDefault()}
-        noValidate
-        autoComplete="off"
-        className="container"
-      >
-        <div className="grid gap-5 md:grid-cols-2">
-          <Input {...name_validation} />
-          <Input {...email_validation} />
-          <Input {...password_validation} />
-        </div>
-        <div className="mt-5">
-          {success && (
-            <p className="flex items-center gap-1 mb-5 font-semibold text-green-500">
-              <BsFillCheckSquareFill /> El formulario se ha enviado
-              correctamente
-            </p>
-          )}
-          <button
-            onClick={onSubmit}
-            className="flex items-center gap-1 p-5 font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-800"
-          >
-            <GrMail />
-            Enviar Formulario
-          </button>
-        </div>
+    <div>
+      <form onSubmit={handleSubmit}>
+        {error && <div>{error}</div>}
+        <h1>Signup</h1>
+
+        <label>Fullname:</label>
+        <input type="text" placeholder="Fullname" name="fullname" required />
+
+        <label>Email:</label>
+        <input type="email" placeholder="Email" name="email" required />
+
+        <label>Password:</label>
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          required
+        />
+
+        <button type="submit">Signup</button>
       </form>
-    </FormProvider>
+    </div>
   );
 }

@@ -1,6 +1,6 @@
 import imagen from '@/assets/images/imagen.jpg';
 import logo from '@/assets/images/logo.png';
-import { Navbar } from '@/components/navbar';
+import { Navbar } from '@/components/ui/headers';
 import Image from 'next/image';
 
 // Direct imports
