@@ -2,7 +2,7 @@
 
 import { signOut, useSession } from 'next-auth/react';
 
-export function ProfilePage() {
+export default function ProfilePage() {
   const { data: session, status } = useSession();
 
   return (
