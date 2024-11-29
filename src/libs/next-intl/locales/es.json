@@ -1,10 +1,11 @@
 {
-  "LocaleSwitcher": {
+  "Language": {
+    "label": "Idioma",
     "en": "English",
-    "es": "Español",
-    "label": "Idioma"
+    "es": "Español"
   },
-  "HomePage": {
-    "title": "Hola mundo!"
+  "Auth": {
+    "signup": "Registrarse",
+    "signin": "Iniciar sesión"
   }
 }

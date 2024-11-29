@@ -9,5 +9,4 @@ const UserSchema = new Schema(
   { timestamps: true },
 );
 
-// Export the model, ensuring it's typed correctly
 export const User = models.User || mongoose.model('User', UserSchema);

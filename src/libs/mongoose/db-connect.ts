@@ -1,8 +1,6 @@
 import { MONGODB_URI } from '@/config/env';
 import mongoose from 'mongoose';
 
-if (!MONGODB_URI) throw new Error('MONGODB_URI must be defined');
-
 export const dbConnect = async () => {
   try {
     // Establish the database connection

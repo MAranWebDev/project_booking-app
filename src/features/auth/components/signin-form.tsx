@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import { useForm } from 'react-hook-form';
 
-export const SignupForm = () => {
+export const SigninForm = () => {
   // "react-hook-form"
   const {
     register,
