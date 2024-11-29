@@ -1,12 +1,12 @@
 import { getRequestConfig } from 'next-intl/server';
 
-export default getRequestConfig(async () => {
-  // Provide a static locale, fetch a user setting,
-  // read from `cookies()`, `headers()`, etc.
-  const locale = 'en';
+// Constants
+const LOCALE = 'en';
+const MESSAGES_PATH = `./locales/${LOCALE}.json`;
 
+export default getRequestConfig(async () => {
   return {
-    locale,
-    messages: (await import(`../../messages/${locale}.json`)).default,
+    locale: LOCALE,
+    messages: (await import(MESSAGES_PATH)).default,
   };
 });
