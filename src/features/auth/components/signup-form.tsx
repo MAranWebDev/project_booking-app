@@ -56,7 +56,7 @@ export const SignupForm = () => {
     >
       <Stack spacing={2}>
         <TextField
-          label="Name"
+          label={t('name')}
           error={!!errors.name}
           helperText={errors.name?.message}
           {...register('name')}
@@ -69,7 +69,7 @@ export const SignupForm = () => {
           {...register('email')}
         />
         <TextField
-          label="Password"
+          label={t('password')}
           type="password"
           error={!!errors.password}
           helperText={errors.password?.message}

@@ -6,7 +6,9 @@
   },
   "Auth": {
     "signup": "Registrarse",
-    "signin": "Iniciar sesión"
+    "signin": "Iniciar sesión",
+    "name": "Nombre",
+    "password": "Contraseña"
   },
   "Navbar": {
     "home": "Inicio",

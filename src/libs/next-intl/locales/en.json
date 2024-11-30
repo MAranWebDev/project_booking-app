@@ -6,7 +6,9 @@
   },
   "Auth": {
     "signup": "Sign up",
-    "signin": "Sign in"
+    "signin": "Sign in",
+    "name": "Name",
+    "password": "Password"
   },
   "Navbar": {
     "home": "Home",

@@ -6,9 +6,15 @@ import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
+import { signIn } from 'next-auth/react';
+import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 
 export const SigninForm = () => {
+  const t = useTranslations('Auth');
+  const router = useRouter();
+
   // "react-hook-form"
   const {
     register,
@@ -19,8 +25,14 @@ export const SigninForm = () => {
   });
 
   // Utils
-  const onSubmit = (inputs: UsersZodSignin) => {
-    console.log(inputs);
+  const onSubmit = async ({ email, password }: UsersZodSignin) => {
+    const res = await signIn('credentials', {
+      email,
+      password,
+      redirect: false,
+    });
+
+    if (res?.ok) return router.push('/dashboard/profile');
   };
 
   return (
@@ -37,14 +49,14 @@ export const SigninForm = () => {
           {...register('email')}
         />
         <TextField
-          label="Password"
+          label={t('password')}
           error={!!errors.password}
           helperText={errors.password?.message}
           {...register('password')}
         />
 
         <Button variant="contained" type="submit">
-          Signin
+          {t('signin')}
         </Button>
       </Stack>
     </Paper>
