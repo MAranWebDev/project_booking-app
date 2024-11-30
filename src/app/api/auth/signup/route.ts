@@ -7,15 +7,22 @@ import { NextResponse } from 'next/server';
 
 export const POST = async (req: Request) => {
   try {
-    // Parse and validate request body
     const body = await req.json();
-    const { data } = usersZodSignup.safeParse(body);
-    const { name, email, password } = data!;
 
-    // Database connection
+    // Validate request body
+    const parsedBody = usersZodSignup.safeParse(body);
+    if (!parsedBody.success)
+      return NextResponse.json(
+        { message: 'Validation failed', errors: parsedBody.error.flatten() },
+        { status: 400 },
+      );
+
+    const { name, email, password } = parsedBody.data;
+
+    // Connect to database
     await dbConnect();
 
-    // Check if user already exists
+    // Check if user exists
     const userFound = await User.exists({ email });
     if (userFound)
       return NextResponse.json(
@@ -25,21 +32,21 @@ export const POST = async (req: Request) => {
 
     // Hash password and create user
     const hashedPassword = await bcrypt.hash(password, 12);
-    const { createdAt, updatedAt } = await User.create({
-      name,
-      email,
-      password: hashedPassword,
-    });
+    const user = await User.create({ name, email, password: hashedPassword });
+
     return NextResponse.json(
-      { name, email, createdAt, updatedAt },
+      {
+        name: user.name,
+        email: user.email,
+        createdAt: user.createdAt,
+        updatedAt: user.updatedAt,
+      },
       { status: 201 },
     );
   } catch (error) {
     const status = error instanceof mongoose.Error.ValidationError ? 400 : 500;
     const message =
-      error instanceof mongoose.Error.ValidationError
-        ? error.message
-        : 'Internal Server Error';
+      error instanceof Error ? error.message : 'Internal Server Error';
     return NextResponse.json({ message }, { status });
   }
 };

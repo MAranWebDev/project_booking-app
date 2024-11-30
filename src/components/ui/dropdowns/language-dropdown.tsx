@@ -1,6 +1,6 @@
 'use client';
 
-import { Locale } from '@/libs/next-intl/config';
+import { Locale, LOCALES } from '@/libs/next-intl/constants';
 import { setUserLocale } from '@/libs/next-intl/locale';
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
@@ -11,12 +11,12 @@ import Typography from '@mui/material/Typography';
 import { useLocale, useTranslations } from 'next-intl';
 
 export const LanguageDropdown = () => {
-  const t = useTranslations('LocaleSwitcher');
+  const t = useTranslations('Language');
   const currentLocale = useLocale();
 
-  const LANGUAGES = [
-    { value: 'en', label: t('en') },
-    { value: 'es', label: t('es') },
+  const languages = [
+    { value: LOCALES.EN, label: t('en') },
+    { value: LOCALES.ES, label: t('es') },
   ];
 
   // Utils
@@ -34,7 +34,7 @@ export const LanguageDropdown = () => {
         onChange={handleChange}
         label={t('label')}
       >
-        {LANGUAGES.map(({ value, label }) => (
+        {languages.map(({ value, label }) => (
           <MenuItem key={value} value={value}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
               <Typography>{label}</Typography>
