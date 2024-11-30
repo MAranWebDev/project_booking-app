@@ -2,12 +2,10 @@
 
 import { Locale, LOCALES } from '@/libs/next-intl/constants';
 import { setUserLocale } from '@/libs/next-intl/utils';
-import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import Typography from '@mui/material/Typography';
 import { useLocale, useTranslations } from 'next-intl';
 
 export const LanguageDropdown = () => {
@@ -25,20 +23,27 @@ export const LanguageDropdown = () => {
 
   return (
     <FormControl>
-      <InputLabel id="select-label">{t('label')}</InputLabel>/
+      <InputLabel
+        id="select-label"
+        sx={{ color: 'inherit', '&.Mui-focused': { color: 'inherit' } }}
+      >
+        {t('label')}
+      </InputLabel>
       <Select
         labelId="select-label"
         id="select"
-        name="select"
         value={currentLocale}
         onChange={handleChange}
         label={t('label')}
+        sx={{
+          color: 'inherit',
+          '.MuiOutlinedInput-notchedOutline': { borderColor: 'inherit' },
+          '.MuiSvgIcon-root': { color: 'inherit' },
+        }}
       >
         {languages.map(({ value, label }) => (
-          <MenuItem key={value} value={value}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <Typography>{label}</Typography>
-            </Box>
+          <MenuItem key={value} value={value} sx={{ color: 'inherit' }}>
+            {label}
           </MenuItem>
         ))}
       </Select>
