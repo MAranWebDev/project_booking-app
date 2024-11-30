@@ -1,7 +1,7 @@
 'use client';
 
 import { Locale, LOCALES } from '@/libs/next-intl/constants';
-import { setUserLocale } from '@/libs/next-intl/locale';
+import { setUserLocale } from '@/libs/next-intl/utils';
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
