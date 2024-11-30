@@ -6,10 +6,13 @@ import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
+import { signIn } from 'next-auth/react';
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 
 export const SignupForm = () => {
+  const t = useTranslations('Auth');
   const router = useRouter();
 
   // "react-hook-form"
@@ -35,15 +38,14 @@ export const SignupForm = () => {
     }
 
     const signupResponse = await response.json();
-    console.log(signupResponse);
 
-    // const res = await signIn('credentials', {
-    //   email: signupResponse.email,
-    //   password,
-    //   redirect: false,
-    // });
+    const res = await signIn('credentials', {
+      email: signupResponse.email,
+      password,
+      redirect: false,
+    });
 
-    // if (res?.ok) return router.push('/dashboard/profile');
+    if (res?.ok) return router.push('/dashboard/profile');
   };
 
   return (
@@ -54,14 +56,12 @@ export const SignupForm = () => {
     >
       <Stack spacing={2}>
         <TextField
-          required
           label="Name"
           error={!!errors.name}
           helperText={errors.name?.message}
           {...register('name')}
         />
         <TextField
-          required
           label="Email"
           type="email"
           error={!!errors.email}
@@ -69,7 +69,6 @@ export const SignupForm = () => {
           {...register('email')}
         />
         <TextField
-          required
           label="Password"
           type="password"
           error={!!errors.password}
@@ -78,7 +77,7 @@ export const SignupForm = () => {
         />
 
         <Button variant="contained" type="submit">
-          Signup
+          {t('signup')}
         </Button>
       </Stack>
     </Paper>
