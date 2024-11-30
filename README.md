@@ -35,3 +35,9 @@
 
    - agendar tus consultas - pendiente
    - visualizar tus consultas - pendiente
+
+## Extra Mario
+
+- Agregar toda las instrucciones de uso
+- Agregar referencias a la documentación
+- Refactorizar
