@@ -1,6 +1,5 @@
 import { dbConnect } from '@/libs/mongoose/db-connect';
 import { User } from '@/libs/mongoose/models';
-import { usersZodSignin } from '@/libs/zod/schemas';
 import bcrypt from 'bcryptjs';
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
@@ -20,11 +19,10 @@ const handler = NextAuth({
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
+        // Connect to database
         await dbConnect();
 
-        // Parse and validate request body
-        const { data } = usersZodSignin.safeParse(credentials);
-        const { email, password } = data!;
+        const { email, password } = credentials!;
         const user = await User.findOne({ email }).select('+password');
         const doesPasswordMatch = await bcrypt.compare(password, user.password);
         if (!user && !doesPasswordMatch) throw new Error('Invalid credentials');
