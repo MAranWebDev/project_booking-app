@@ -4,10 +4,12 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { getServerSession } from 'next-auth';
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
 export const Navbar = async () => {
   const session = await getServerSession();
+  const t = await getTranslations('Navbar');
 
   return (
     <AppBar position="static">
@@ -33,14 +35,14 @@ export const Navbar = async () => {
             alignItems: 'center',
           }}
         >
-          <Link href="/">Home</Link>
+          <Link href="/">{t('home')}</Link>
 
           {session ? (
-            <Link href="/dashboard/profile">Profile</Link>
+            <Link href="/dashboard/profile">{t('profile')}</Link>
           ) : (
             <>
-              <Link href="/signup">Signup</Link>
-              <Link href="/signin">Signin</Link>
+              <Link href="/signup">{t('register')}</Link>
+              <Link href="/signin">{t('login')}</Link>
             </>
           )}
           <LanguageDropdown />
