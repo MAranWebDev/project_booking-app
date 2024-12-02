@@ -3,11 +3,11 @@
 import { usersZodSignin, UsersZodSignin } from '@/libs/zod/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Button from '@mui/material/Button';
-import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import { signIn } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
+
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 
@@ -36,11 +36,7 @@ export const SigninForm = () => {
   };
 
   return (
-    <Paper
-      sx={{ width: 500, p: 6 }}
-      component="form"
-      onSubmit={handleSubmit(onSubmit)}
-    >
+    <form onSubmit={handleSubmit(onSubmit)}>
       <Stack spacing={2}>
         <TextField
           label="Email"
@@ -59,6 +55,6 @@ export const SigninForm = () => {
           {t('signin')}
         </Button>
       </Stack>
-    </Paper>
+    </form>
   );
 };
