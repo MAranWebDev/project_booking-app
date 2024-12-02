@@ -1,8 +1,8 @@
-import '@/assets/styles/globals.css';
 import { Navbar } from '@/components/ui/headers';
 import { MuiProvider } from '@/libs/mui/mui-provider';
 import { robotoFont } from '@/libs/mui/robot-font';
 import { NextAuthProvider } from '@/libs/next-auth/next-auth-provider';
+import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
