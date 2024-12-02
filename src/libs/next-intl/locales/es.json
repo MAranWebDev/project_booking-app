@@ -8,12 +8,13 @@
     "signup": "Registrarse",
     "signin": "Iniciar sesión",
     "name": "Nombre",
+    "email": "Email",
     "password": "Contraseña"
   },
   "Navbar": {
     "home": "Inicio",
-    "profile": "Perfil",
-    "register": "Registro",
-    "login": "Acceso"
+    "about": "Quiénes somos",
+    "contact": "Contacto",
+    "signup": "Regístrate"
   }
 }

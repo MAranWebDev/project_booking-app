@@ -8,12 +8,13 @@
     "signup": "Sign up",
     "signin": "Sign in",
     "name": "Name",
+    "email": "Email",
     "password": "Password"
   },
   "Navbar": {
     "home": "Home",
-    "profile": "Profile",
-    "register": "Register",
-    "login": "Log in"
+    "about": "About",
+    "contact": "Contact",
+    "signup": "Sign up"
   }
 }
