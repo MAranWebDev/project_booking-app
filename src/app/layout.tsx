@@ -1,4 +1,4 @@
-import { Navbar } from '@/components/ui/headers';
+import { PublicHeader } from '@/components/ui/headers';
 import { MuiProvider } from '@/libs/mui/mui-provider';
 import { robotoFont } from '@/libs/mui/robot-font';
 import { NextAuthProvider } from '@/libs/next-auth/next-auth-provider';
@@ -28,7 +28,7 @@ export default async function RootLayout({
           {/* "next-intl" */}
           <NextIntlClientProvider messages={messages}>
             <NextAuthProvider>
-              <Navbar />
+              <PublicHeader />
               {children}
             </NextAuthProvider>
           </NextIntlClientProvider>

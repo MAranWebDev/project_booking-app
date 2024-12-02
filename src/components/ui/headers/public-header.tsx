@@ -6,7 +6,7 @@ import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const Navbar = async () => {
+export const PublicHeader = async () => {
   const t = await getTranslations('Navbar');
 
   return (
@@ -29,7 +29,7 @@ export const Navbar = async () => {
         </Toolbar>
       </AppBar>
 
-      {/* Empty toolbar to not have content behind the AppBar  */}
+      {/* Empty toolbar to not have content behind the AppBar with "fixed" position  */}
       <Toolbar />
     </header>
   );
