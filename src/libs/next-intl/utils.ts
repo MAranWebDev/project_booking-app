@@ -3,7 +3,7 @@
 import { cookies } from 'next/headers';
 import { DEFAULT_LOCALE, Locale } from './constants';
 
-// In this example the locale is read from a cookie.
+// The locale is read from a cookie.
 const COOKIE_NAME = 'NEXT_LOCALE';
 
 export const getUserLocale = async () => {

@@ -1,26 +1,26 @@
 # Proyecto de Diseño de Software 2024: Página para gestión de salud mental en el trabajo
 
-## Instrucciones de uso
+## Instructions
 
-**Levantar base de datos**
+**Build db**
 
 ```bash
 docker-compose up -d
 ```
 
-**Destruir base de datos**
+**Destroy db**
 
 ```bash
 docker-compose down -v
 ```
 
-**Crear carpeta node_modules y package-lock.json**
+**Create node_modules & package-lock.json**
 
 ```bash
 $ npm install
 ```
 
-**Correr aplicación**
+**Run app**
 
 ```bash
 npm run dev
@@ -43,9 +43,9 @@ npm run dev
    (pendiente) - Carga de datos.
    (pendiente) - Visualización de datos.
 
-## Tecnologías
+## Technologies
 
-**Instaladores**
+**Installers**
 
 - google chrome: https://www.google.com/chrome/
 - node: https://nodejs.org/en
@@ -78,7 +78,7 @@ npm run dev
 - “bcryptjs”: Encriptador de contraseñas de next.js.
 - “mongoose”: ORM para interactuar con mongodb.
 
-**Tutoriales de referencia**
+**Tutorials**
 
 - Traducciones (next-intl): https://next-intl-docs.vercel.app/docs/getting-started/app-router/without-i18n-routing
 - Material design (mui): https://mui.com/material-ui/integrations/nextjs/
