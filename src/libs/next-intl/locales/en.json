@@ -4,17 +4,21 @@
     "en": "English",
     "es": "Español"
   },
-  "Auth": {
-    "signup": "Sign up",
-    "signin": "Sign in",
-    "name": "Name",
-    "email": "Email",
-    "password": "Password"
+  "Home": {
+    "contactMessage": "Need to talk?",
+    "helpMessage": "Help guide"
   },
   "Navbar": {
     "home": "Home",
     "about": "About",
     "contact": "Contact",
     "signup": "Sign up"
+  },
+  "Auth": {
+    "signup": "Sign up",
+    "signin": "Sign in",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password"
   }
 }
