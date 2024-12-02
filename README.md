@@ -36,11 +36,11 @@
    - agendar tus consultas - pendiente
    - visualizar tus consultas - pendiente
 
-## Extra Mario
+## Agregar
 
-- Instrucciones de uso
-- Referencias y documentación
-- Pruebas registro y login
-- ejemplo context y local storage
-- enseñar hooks y funcionalidad
-- agregar notificaciones?
+- Documentación: Instrucciones de uso
+- Documentación: Tutoriales de implementación y comentarios
+- Ejemplo context y local storage
+- Agregar notificaciones?
+- Reducir eslint
+- Retirar prettierrc + settings

@@ -50,12 +50,14 @@ export const SigninForm = () => {
         <Stack spacing={2}>
           <TextField
             label={t('email')}
+            type="email"
             error={!!errors.email}
             helperText={errors.email?.message}
             {...register('email')}
           />
           <TextField
             label={t('password')}
+            type="password"
             error={!!errors.password}
             helperText={errors.password?.message}
             {...register('password')}
