@@ -38,6 +38,8 @@
 
 ## Extra Mario
 
-- Agregar toda las instrucciones de uso
-- Agregar referencias a la documentación
-- Refactorizar
+- Instrucciones de uso
+- Referencias y documentación
+- Pruebas registro y login
+- ejemplo context y local storage
+- enseñar hooks y funcionalidad
