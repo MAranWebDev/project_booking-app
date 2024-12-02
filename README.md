@@ -43,3 +43,4 @@
 - Pruebas registro y login
 - ejemplo context y local storage
 - enseñar hooks y funcionalidad
+- agregar notificaciones?
