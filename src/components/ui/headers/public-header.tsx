@@ -22,7 +22,6 @@ export const PublicHeader = async () => {
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             <Link href="/">{t('home')}</Link>
             <Link href="/about">{t('about')}</Link>
-            <Link href="/contact">{t('contact')}</Link>
             <Link href="/signup">{t('signup')}</Link>
             <LanguageDropdown />
           </Box>
