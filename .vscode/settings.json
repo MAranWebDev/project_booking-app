@@ -26,10 +26,6 @@
   //   ".env": "env",
   //   "*.env.*": "env"
   // },
-  // // Vscode customization
-  // "explorer.compactFolders": false,
-  // "workbench.iconTheme": "material-icon-theme",
-  // "material-icon-theme.activeIconPack": "react",
   // // "Git bash": last line before new setting
   // "terminal.integrated.defaultProfile.windows": "Git Bash"
 }
