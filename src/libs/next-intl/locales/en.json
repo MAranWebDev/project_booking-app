@@ -1,0 +1,24 @@
+{
+  "Language": {
+    "label": "Language",
+    "en": "English",
+    "es": "Español"
+  },
+  "Home": {
+    "contactMessage": "Need to talk?",
+    "helpMessage": "Help guide"
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "signup": "Sign up"
+  },
+  "Auth": {
+    "signup": "Sign up",
+    "signin": "Sign in",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password"
+  }
+}

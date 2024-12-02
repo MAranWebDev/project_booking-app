@@ -1,48 +1,46 @@
-import imagen from '@/assets/images/imagen.jpg';
-import logo from '@/assets/images/logo.png';
-import { Navbar } from '@/components/navbar';
-import Image from 'next/image';
+import { SigninForm } from '@/features/auth/components';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import { useTranslations } from 'next-intl';
 
-// Direct imports
-import '@/assets/styles/styles.css';
+export default function RootPage() {
+  const t = useTranslations('Home');
 
-export default function Page() {
   return (
-    <div className="container">
-      <header className="Header">
-        <div className="logo-header">
-          <Image src={logo} alt="Logo" width={60} height={60} />
-        </div>
-      </header>
+    <Box
+      component="main"
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        width: '100%',
+        height: 'calc(100vh - 64px)',
+        overflow: 'hidden',
+        backgroundImage: `url("/images/imagen.jpg")`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+      }}
+    >
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'end',
+          flexGrow: 1,
+          gap: 2,
+          p: 2,
+        }}
+      >
+        <Button sx={{ backgroundColor: 'transparent' }} variant="contained">
+          {t('contactMessage')}
+        </Button>
+        <Button sx={{ backgroundColor: 'transparent' }} variant="contained">
+          {t('helpMessage')}
+        </Button>
+      </Box>
 
-      <Navbar></Navbar>
-
-      <div className="login-box">
-        <div className="logo">
-          <Image src={logo} alt="Logo" width={150} height={150} />
-        </div>
-        <form>
-          <input type="text" placeholder="Usuario" />
-          <input type="password" placeholder="Contraseña" />
-          <button type="submit">Ingresar</button>
-        </form>
-      </div>
-
-      <div className="image-frame">
-        <Image
-          style={{ objectFit: 'cover' }}
-          src={imagen}
-          alt="Imagen"
-          width={3000}
-          height={1686}
-          quality={100}
-        />
-
-        <div className="button-container">
-          <button className="action-button">¿Necesitas Hablar?</button>
-          <button className="action-button">Guías de Ayuda</button>
-        </div>
-      </div>
-    </div>
+      <Box sx={{ display: 'flex', alignItems: 'start', p: 2 }}>
+        <SigninForm />
+      </Box>
+    </Box>
   );
 }

@@ -1,3 +1,26 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "plugins": ["check-file"],
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "prettier" // "eslint-config-prettier": needs to be at the end
+  ],
+  "rules": {
+    // "eslint": To prevent importing from forbidden paths.
+    "no-restricted-imports": [
+      "error",
+      { "patterns": ["src", "../**", "@/*/*/*/*", "./*/*/*/*"] }
+    ],
+
+    // "eslint-plugin-check-file": To force naming conventions.
+    "check-file/folder-naming-convention": [
+      "error",
+      { "src/**/!(__tests__)": "KEBAB_CASE" }
+    ],
+    "check-file/filename-naming-convention": [
+      "error",
+      { "**/*.{ts,tsx}": "KEBAB_CASE" },
+      { "ignoreMiddleExtensions": true }
+    ]
+  }
 }
