@@ -1,4 +1,4 @@
-import { PublicHeader } from '@/components/ui/headers';
+import { PublicHeader } from '@/components/headers';
 import { MuiProvider } from '@/libs/mui/mui-provider';
 import { robotoFont } from '@/libs/mui/robot-font';
 import { NextAuthProvider } from '@/libs/next-auth/next-auth-provider';

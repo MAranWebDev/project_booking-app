@@ -1,4 +1,4 @@
-import { LanguageDropdown } from '@/components/ui/dropdowns';
+import { LanguageDropdown } from '@/components/dropdowns';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
