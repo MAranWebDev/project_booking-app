@@ -84,4 +84,4 @@ npm run dev
 - Autenticación y db (next-auth):
   - https://www.youtube.com/watch?v=w9l7vUWzw1I
   - https://github.com/fazt/next-auth-credentials-mongodb/tree/master
-- Agendamiento: https://www.youtube.com/watch?v=C3U1RforbH4
+- Agendamiento: https://www.youtube.com/watch?v=ny9T62gqrWg
