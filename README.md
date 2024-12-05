@@ -85,3 +85,5 @@ npm run dev
   - https://www.youtube.com/watch?v=w9l7vUWzw1I
   - https://github.com/fazt/next-auth-credentials-mongodb/tree/master
 - Agendamiento: https://www.youtube.com/watch?v=ny9T62gqrWg
+
+explicar como se abre mongo express

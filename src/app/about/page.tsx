@@ -1,5 +1,6 @@
 'use client';
 
+import { Calendar } from '@/components/calendar';
 import { useAppContext } from '@/context/app.context';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -25,6 +26,10 @@ export default function AboutPage() {
       <Button variant="outlined" onClick={changeCounter}>
         Agregar a contador
       </Button>
+
+      <section>
+        <Calendar />
+      </section>
     </main>
   );
 }
