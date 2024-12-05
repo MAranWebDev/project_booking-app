@@ -50,17 +50,14 @@ npm run dev
 - google chrome: https://www.google.com/chrome/
 - node: https://nodejs.org/en
 - git | git bash | github: https://git-scm.com/downloads
-- wsl: https://www.youtube.com/watch?v=HrAsmXy1-78
 - docker desktop: https://www.docker.com/products/docker-desktop/
 - vscode: https://code.visualstudio.com/
 - vscode extensiones:
-  - Code Spell Checker: Revisa errores ortográficos en inglés.
-  - Docker: Para formato archivos docker-compose.yml y dockerfile.
-  - ENV: Para formato variables de entorno.
   - Error Lens: Para ver mensajes de error en el editor.
   - ESLint: Para ver errores del linter en el editor.
   - Prettier - Code formatter: Para formatear código.
-  - Thunder Client: Para testear endpoints.
+  - shell-format: Para formatear archivos que no son prettier.
+  - Supermaven: Autocompletar código con ia.
 
 **Tech Stack**
 
