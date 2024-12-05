@@ -1,0 +1,21 @@
+{
+  // Terminal profile: Git bash
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+  // Default formatter: Prettier
+  "[html][css][scss][javascript][javascriptreact][typescript][typescriptreact][json][jsonc][dockercompose]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Autoremane html tags
+  "[html][javascriptreact][typescriptreact]": { "editor.linkedEditing": true },
+
+  // Format on save settings (optional: disable if lag is noticeable)
+  "editor.formatOnSave": true, // Enable format on save
+  "[javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit", // Organize imports
+      "source.fixAll.eslint": "explicit" // Fix eslint errors
+    }
+  }
+}
