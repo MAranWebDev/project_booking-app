@@ -12,13 +12,13 @@
     "home": "Inicio",
     "about": "Quiénes somos",
     "signup": "Registrarse",
-    "signout": "Cerrar sesión"
+    "signin": "Iniciar sesión",
+    "goback": "Volver atrás"
   },
   "Auth": {
     "signup": "Registrarse",
     "signin": "Iniciar sesión",
     "signout": "Cerrar sesión",
-    "goback": "Volver atrás",
     "name": "Nombre",
     "email": "Email",
     "password": "Contraseña"

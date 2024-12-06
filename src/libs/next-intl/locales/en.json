@@ -12,13 +12,13 @@
     "home": "Home",
     "about": "About",
     "signin": "Sign in",
-    "signup": "Sign up"
+    "signup": "Sign up",
+    "goback": "Go back"
   },
   "Auth": {
     "signup": "Sign up",
     "signin": "Sign in",
     "signout": "Sign out",
-    "goback": "Go back",
     "name": "Name",
     "email": "Email",
     "password": "Password"
