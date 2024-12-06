@@ -3,9 +3,9 @@ import { User } from '@/libs/mongoose/models';
 import { usersZodSignup } from '@/libs/zod/schemas';
 import bcrypt from 'bcryptjs';
 import mongoose from 'mongoose';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
-export const POST = async (req: Request) => {
+export const POST = async (req: NextRequest) => {
   try {
     const body = await req.json();
 

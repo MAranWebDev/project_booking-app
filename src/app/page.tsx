@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import { useTranslations } from 'next-intl';
 
 export default function RootPage() {
+  // "next-intl"
   const t = useTranslations('Home');
 
   return (
