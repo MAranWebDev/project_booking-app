@@ -17,6 +17,7 @@
   "Auth": {
     "signup": "Registrarse",
     "signin": "Iniciar sesión",
+    "signout": "Cerrar sesión",
     "name": "Nombre",
     "email": "Email",
     "password": "Contraseña"

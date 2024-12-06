@@ -1,0 +1,19 @@
+'use client';
+
+import Button from '@mui/material/Button';
+import { signOut } from 'next-auth/react';
+import { useTranslations } from 'next-intl';
+
+export const SignoutButton = () => {
+  // "next-intl"
+  const t = useTranslations('Auth');
+
+  // Methods
+  const handleClickSignout = () => signOut();
+
+  return (
+    <Button variant="outlined" onClick={handleClickSignout}>
+      {t('signout')}
+    </Button>
+  );
+};
