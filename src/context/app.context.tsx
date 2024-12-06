@@ -8,11 +8,11 @@ interface Context {
   changeCounter: () => void;
 }
 
-// Create context
+// Context
 const AppContext = createContext<Context | undefined>(undefined);
 
 // Context provider
-export const AppProvider = ({ children }: PropsWithChildren) => {
+export const AppContextProvider = ({ children }: PropsWithChildren) => {
   const [counter, setCounter] = useState(0);
 
   // Methods
@@ -29,7 +29,7 @@ export const AppProvider = ({ children }: PropsWithChildren) => {
   );
 };
 
-// Context hook
+// Context custom hook
 export const useAppContext = () => {
   const contextValues = useContext(AppContext);
 

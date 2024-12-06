@@ -3,9 +3,10 @@ import { getUserLocale } from './utils';
 
 export default getRequestConfig(async () => {
   const locale = await getUserLocale();
+  const translationsPath = `./locales/${locale}.json`;
 
   return {
     locale,
-    messages: (await import(`./locales/${locale}.json`)).default,
+    messages: (await import(translationsPath)).default,
   };
 });

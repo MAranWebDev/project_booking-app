@@ -2,11 +2,11 @@ import Button from '@mui/material/Button';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { useEffect, useState } from 'react';
-import dayjs from 'dayjs';
+import { Dayjs } from 'dayjs';
 
 export const Calendar = () => {
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-  const [selectedTime, setSelectedTime] = useState<Date | null>(null);
+  const [selectedDate, setSelectedDate] = useState<Dayjs | null>(null);
+  const [selectedTime, setSelectedTime] = useState<Dayjs | null>(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

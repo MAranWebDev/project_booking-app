@@ -2,12 +2,12 @@ import { LanguageDropdown } from '@/components/dropdowns';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import { getTranslations } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const PublicHeader = async () => {
-  const t = await getTranslations('Navbar');
+export const PublicHeader = () => {
+  const t = useTranslations('Navbar');
 
   return (
     <header>

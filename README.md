@@ -26,11 +26,17 @@ $ npm install
 npm run dev
 ```
 
+**Urls**
+
+- Client: http://localhost:3000/
+- Api: http://localhost:3000/api
+- Mongo Express (GUI): http://localhost:8181
+
 ## Requerimientos
 
 1. (ok) - Responsive Design: Móvil/Tablet/Desktop, respetando material design
 2. (ok) - Traducciones: Idiomas inglés/español
-3. (pendiente) - Local Storage: Almacenar info usuario como nombre y idioma
+3. (ok) - Local Storage: Almacenar info usuario como nombre y idioma
 4. Usuarios:
    (ok) - Registrar usuarios.
    (ok) - Validar contraseña.
@@ -58,32 +64,39 @@ npm run dev
   - Prettier - Code formatter: Para formatear código.
   - shell-format: Para formatear archivos que no son prettier.
   - Supermaven: Autocompletar código con ia.
+  - vscode-icons: Para ver iconos en el editor.
 
 **Tech Stack**
 
-- “next.js”: Framework full stack.
-- “typescript”: Lenguaje de programación
-- “mongodb”: Base de datos
-- “prettier”: Identador y formateador de código.
-- “eslint”: Linter, detecta errores.
-- “mui”: Framework UI.
-- “react-hook-form”: Manipulación de formularios.
-- "hookform/resolvers": Conector entre react-hook-form y zod.
-- “zod”: Validaciones cliente y servidor.
-- “next-intl”: Traducciones de next.js.
-- “next-auth”: Autenticación de next.js.
-- “bcryptjs”: Encriptador de contraseñas de next.js.
-- “mongoose”: ORM para interactuar con mongodb.
+- next.js: Framework full stack.
+- typescript: Lenguaje de programación
+- mongodb: Base de datos
+- prettier: Identador y formateador de código.
+- eslint: Linter, detecta errores.
+- mui: Framework UI.
+- mui-x-date-pickers: Calendario.
+- notistack: Notificaciones.
+- react-hook-form: Manipulación de formularios.
+- hookform/resolvers: Conector entre react-hook-form y zod.
+- zod: Validaciones cliente y servidor.
+- next-intl: Traducciones de next.js.
+- next-auth: Autenticación de next.js.
+- bcryptjs: Encriptador de contraseñas de next.js.
+- mongoose: ORM para interactuar con mongodb.
 
 **Tutorials**
 
 - Traducciones (next-intl): https://next-intl-docs.vercel.app/docs/getting-started/app-router/without-i18n-routing
 - Material design (mui): https://mui.com/material-ui/integrations/nextjs/
+- Calendario (mui-x-date-pickers): https://mui.com/x/react-date-pickers/getting-started/
+- Notificaciones (notistack): https://notistack.com/features/basic
 - Validaciones cliente (react-hook-form | zod): https://react-hook-form.com/docs/useform
 - Validaciones servidor (zod): https://zod.dev/?id=parse
-- Autenticación y db (next-auth):
-  - https://www.youtube.com/watch?v=w9l7vUWzw1I
-  - https://github.com/fazt/next-auth-credentials-mongodb/tree/master
+- Autenticación y db (next-auth): https://www.youtube.com/watch?v=w9l7vUWzw1I
 - Agendamiento: https://www.youtube.com/watch?v=ny9T62gqrWg
 
-explicar como se abre mongo express
+## Others
+
+- add notifications
+- add schedule endpoint
+- review translations
