@@ -18,6 +18,7 @@
     "signup": "Registrarse",
     "signin": "Iniciar sesión",
     "signout": "Cerrar sesión",
+    "goback": "Volver atrás",
     "name": "Nombre",
     "email": "Email",
     "password": "Contraseña"

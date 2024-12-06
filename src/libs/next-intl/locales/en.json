@@ -18,6 +18,7 @@
     "signup": "Sign up",
     "signin": "Sign in",
     "signout": "Sign out",
+    "goback": "Go back",
     "name": "Name",
     "email": "Email",
     "password": "Password"
