@@ -2,19 +2,19 @@
   // // UI
   // "workbench.iconTheme": "vscode-icons", // "vscode-icons"
   // // Terminal
-  // "terminal.integrated.defaultProfile.windows": "Git Bash", // Git Bash
+  // "terminal.integrated.defaultProfile.windows": "Git Bash", // Git bash.
   // // Format
-  // "[html][css][scss][javascript][javascriptreact][typescript][typescriptreact][json][jsonc][dockercompose]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode" // "Prettier - Code formatter"
-  // },
-  // "[html][javascriptreact][typescriptreact]": {
-  //   "editor.linkedEditing": true // Autoremane html tags
-  // },
-  // "editor.formatOnSave": true, // Enable format on save
+  // "editor.formatOnSave": true, // Enable format on save (Shift + Alt + F).
   // "[javascript][javascriptreact][typescript][typescriptreact]": {
   //   "editor.codeActionsOnSave": {
-  //     "source.organizeImports": "explicit", // Organize imports, disable if lag noticeable.
-  //     "source.fixAll.eslint": "explicit" // "ESLint": Fix errors, disable ig lag noticeable.
+  //     // "source.organizeImports": "explicit", // Organize imports (Shift + Alt + O), disable if lag.
+  //     // "source.fixAll.eslint": "explicit" // "ESLint": Fix errors, disable ig lag.
   //   }
+  // },
+  // "[html][javascriptreact][typescriptreact]": {
+  //   "editor.linkedEditing": true // Autoremane html tags.
+  // },
+  // "[html][css][scss][javascript][javascriptreact][typescript][typescriptreact][json][jsonc][dockercompose]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode" // "Prettier - Code formatter"
   // }
 }

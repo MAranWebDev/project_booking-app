@@ -11,8 +11,8 @@
   "Navbar": {
     "home": "Inicio",
     "about": "Quiénes somos",
-    "contact": "Contacto",
-    "signup": "Regístrate"
+    "signup": "Registrarse",
+    "signout": "Cerrar sesión"
   },
   "Auth": {
     "signup": "Registrarse",

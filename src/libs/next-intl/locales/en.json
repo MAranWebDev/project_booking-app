@@ -11,7 +11,7 @@
   "Navbar": {
     "home": "Home",
     "about": "About",
-    "contact": "Contact",
+    "signin": "Sign in",
     "signup": "Sign up"
   },
   "Auth": {
