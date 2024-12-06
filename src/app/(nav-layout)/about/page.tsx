@@ -1,30 +1,28 @@
-'use client';
-
-import { useAppContext } from '@/context/app.context';
-import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import { useTranslations } from 'next-intl';
 
 export default function AboutPage() {
-  const { counter, changeCounter } = useAppContext();
+  // "next-intl"
+  const t = useTranslations('Navbar');
 
   return (
-    <main>
+    <Box sx={{ width: '90%', mx: 'auto' }} component="main">
       <Typography sx={{ p: 1 }} component="h1" variant="h4">
-        About Page
+        {t('about')}
       </Typography>
 
       <Typography component="p">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-        dignissimos eveniet dolore voluptas sunt laudantium deserunt, modi,
-        laboriosam veritatis odit vero, et iure. Sequi dolor odio tempora
-        dolores harum. Molestias!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad ut aperiam
+        corrupti corporis harum nesciunt incidunt pariatur. Ipsa laboriosam
+        laborum beatae similique quidem soluta consequuntur pariatur tempore
+        corporis eius amet ullam doloremque mollitia numquam voluptatibus
+        facilis nostrum delectus quibusdam vitae aliquid, ducimus neque? Labore
+        a natus nobis at! Repellat labore dolorum velit similique non, corrupti
+        quidem, dolores unde expedita dicta repellendus? Aliquam amet, vel
+        repellat cum iusto, omnis animi nesciunt placeat accusantium ipsum
+        quidem dolores laboriosam expedita magni praesentium accusamus soluta.
       </Typography>
-
-      <Typography>Contador: {counter}</Typography>
-
-      <Button variant="outlined" onClick={changeCounter}>
-        Agregar a contador
-      </Button>
-    </main>
+    </Box>
   );
 }

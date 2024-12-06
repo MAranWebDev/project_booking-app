@@ -8,6 +8,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { useLocale, useTranslations } from 'next-intl';
 
 export const LanguageDropdown = () => {
+  // "next-intl"
   const t = useTranslations('Language');
   const currentLocale = useLocale();
 
