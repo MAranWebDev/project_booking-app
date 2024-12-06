@@ -1,4 +1,3 @@
-import { AppHeader } from '@/components/headers/app-header';
 import { AppContextProvider } from '@/context/app.context';
 import { MuiProvider } from '@/libs/mui/provider';
 import { robotoFont } from '@/libs/mui/robot-font';
@@ -29,10 +28,7 @@ export default async function RootLayout({
           {/* "next-intl" */}
           <NextIntlClientProvider messages={messages}>
             <NextAuthProvider>
-              <AppContextProvider>
-                <AppHeader />
-                {children}
-              </AppContextProvider>
+              <AppContextProvider>{children}</AppContextProvider>
             </NextAuthProvider>
           </NextIntlClientProvider>
         </MuiProvider>
