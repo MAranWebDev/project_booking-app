@@ -1,10 +1,12 @@
+'use client';
+
 import Button from '@mui/material/Button';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { useEffect, useState } from 'react';
 import { Dayjs } from 'dayjs';
 
-export const Calendar = () => {
+export function BookingPage() {
   const [selectedDate, setSelectedDate] = useState<Dayjs | null>(null);
   const [selectedTime, setSelectedTime] = useState<Dayjs | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -33,4 +35,4 @@ export const Calendar = () => {
       <Button>Submit</Button>
     </div>
   );
-};
+}
