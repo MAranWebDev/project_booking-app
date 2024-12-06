@@ -15,7 +15,7 @@ const AppContext = createContext<Context | undefined>(undefined);
 export const AppContextProvider = ({ children }: PropsWithChildren) => {
   const [counter, setCounter] = useState(0);
 
-  // Methods
+  // Utils
   const changeCounter = () => setCounter((prevState) => prevState + 1);
 
   // Context values

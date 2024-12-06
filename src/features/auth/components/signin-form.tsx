@@ -12,10 +12,10 @@ import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 
 export const SigninForm = () => {
+  const router = useRouter();
+
   // "next-intl"
   const t = useTranslations('Auth');
-  // "next-auth"
-  const router = useRouter();
 
   // "react-hook-form"
   const {

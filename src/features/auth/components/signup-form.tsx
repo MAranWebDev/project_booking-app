@@ -11,9 +11,14 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 
+// Constants
+const ROUTE_PROFILE = '/dashboard/profile';
+
 export const SignupForm = () => {
-  const t = useTranslations('Auth');
   const router = useRouter();
+
+  // "next-intl"
+  const t = useTranslations('Auth');
 
   // "react-hook-form"
   const {
@@ -45,7 +50,7 @@ export const SignupForm = () => {
       redirect: false,
     });
 
-    if (res?.ok) return router.push('/dashboard/profile');
+    if (res?.ok) return router.push(ROUTE_PROFILE);
   };
 
   return (
@@ -59,7 +64,7 @@ export const SignupForm = () => {
             {...register('name')}
           />
           <TextField
-            label="Email"
+            label={t('email')}
             type="email"
             error={!!errors.email}
             helperText={errors.email?.message}
