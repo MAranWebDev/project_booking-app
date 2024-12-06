@@ -1,9 +1,9 @@
 'use client';
 
+import { AuthFormLayout } from '@/components/layouts/auth-form-layout';
 import { usersZodSignup, UsersZodSignup } from '@/libs/zod/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Button from '@mui/material/Button';
-import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import { signIn } from 'next-auth/react';
@@ -49,37 +49,35 @@ export const SignupForm = () => {
   };
 
   return (
-    <Paper
-      sx={{ width: 500, p: 6 }}
-      component="form"
-      onSubmit={handleSubmit(onSubmit)}
-    >
-      <Stack spacing={2}>
-        <TextField
-          label={t('name')}
-          error={!!errors.name}
-          helperText={errors.name?.message}
-          {...register('name')}
-        />
-        <TextField
-          label="Email"
-          type="email"
-          error={!!errors.email}
-          helperText={errors.email?.message}
-          {...register('email')}
-        />
-        <TextField
-          label={t('password')}
-          type="password"
-          error={!!errors.password}
-          helperText={errors.password?.message}
-          {...register('password')}
-        />
+    <AuthFormLayout>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Stack spacing={2}>
+          <TextField
+            label={t('name')}
+            error={!!errors.name}
+            helperText={errors.name?.message}
+            {...register('name')}
+          />
+          <TextField
+            label="Email"
+            type="email"
+            error={!!errors.email}
+            helperText={errors.email?.message}
+            {...register('email')}
+          />
+          <TextField
+            label={t('password')}
+            type="password"
+            error={!!errors.password}
+            helperText={errors.password?.message}
+            {...register('password')}
+          />
 
-        <Button variant="contained" type="submit">
-          {t('signup')}
-        </Button>
-      </Stack>
-    </Paper>
+          <Button variant="contained" type="submit">
+            {t('signup')}
+          </Button>
+        </Stack>
+      </form>
+    </AuthFormLayout>
   );
 };

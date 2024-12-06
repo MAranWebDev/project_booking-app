@@ -1,19 +1,20 @@
 'use client';
 
+import { AuthFormLayout } from '@/components/layouts/auth-form-layout';
 import { usersZodSignin, UsersZodSignin } from '@/libs/zod/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Button from '@mui/material/Button';
-import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import { signIn } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 
 export const SigninForm = () => {
+  // "next-intl"
   const t = useTranslations('Auth');
+  // "next-auth"
   const router = useRouter();
 
   // "react-hook-form"
@@ -37,15 +38,7 @@ export const SigninForm = () => {
   };
 
   return (
-    <Paper sx={{ width: '450px', p: 6 }}>
-      <Image
-        style={{ margin: 'auto' }}
-        src="/images/logo.png"
-        alt="Logo"
-        width={150}
-        height={150}
-      />
-
+    <AuthFormLayout>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Stack spacing={2}>
           <TextField
@@ -68,6 +61,6 @@ export const SigninForm = () => {
           </Button>
         </Stack>
       </form>
-    </Paper>
+    </AuthFormLayout>
   );
 };
