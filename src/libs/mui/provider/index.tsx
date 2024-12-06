@@ -13,8 +13,8 @@ export const MuiProvider = ({ children }: PropsWithChildren) => {
         {/* Normalize css */}
         <CssBaseline />
 
+        {/* Must be inside theme provider to inherit styles */}
         <MuiXDatePickersProvider>
-          {/* "notistack": must be inside theme provider to inherit styles */}
           <NotistackProvider>{children}</NotistackProvider>
         </MuiXDatePickersProvider>
       </ThemeProvider>
