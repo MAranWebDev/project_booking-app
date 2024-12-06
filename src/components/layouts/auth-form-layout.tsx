@@ -13,7 +13,7 @@ export const AuthFormLayout = ({ children }: PropsWithChildren) => {
   const t = useTranslations('Navbar');
 
   return (
-    <Stack sx={{ width: '450px', px: 6, py: 2 }} component={Paper} gap={2}>
+    <Stack sx={{ width: '450px', px: 6, py: 2 }} component={Paper} spacing={2}>
       <Image
         style={{ margin: 'auto' }}
         src="/images/logo.png"

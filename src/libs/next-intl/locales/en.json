@@ -13,7 +13,9 @@
     "about": "About",
     "signin": "Sign in",
     "signup": "Sign up",
-    "goback": "Go back"
+    "goback": "Go back",
+    "profile": "Profile",
+    "schedule": "Schedule"
   },
   "Auth": {
     "signup": "Sign up",

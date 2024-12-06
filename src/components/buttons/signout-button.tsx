@@ -8,7 +8,7 @@ export const SignoutButton = () => {
   // "next-intl"
   const t = useTranslations('Auth');
 
-  // Methods
+  // Utils
   const handleClickSignout = () => signOut();
 
   return (
