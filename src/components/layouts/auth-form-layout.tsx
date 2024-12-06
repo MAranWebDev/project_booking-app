@@ -25,7 +25,7 @@ export const AuthFormLayout = ({ children }: PropsWithChildren) => {
       {children}
 
       <Link href="/">
-        <Button variant="outlined">{t('goback')}</Button>
+        <Button variant="outlined">{t('home')}</Button>
       </Link>
     </Stack>
   );
