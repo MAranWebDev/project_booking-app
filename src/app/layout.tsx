@@ -7,6 +7,7 @@ import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
+import LocalizationProviderWrapper from '@/components/localizationprovider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -24,19 +25,21 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={robotoFont.variable}>
-        <MuiProvider>
-          {/* "next-intl" */}
-          <NextIntlClientProvider messages={messages}>
-            <NextAuthProvider>
-              <AppProvider>
-                <PublicHeader />
-                {children}
-              </AppProvider>
-            </NextAuthProvider>
-          </NextIntlClientProvider>
-        </MuiProvider>
-      </body>
+      <LocalizationProviderWrapper>
+        <body className={robotoFont.variable}>
+          <MuiProvider>
+            {/* "next-intl" */}
+            <NextIntlClientProvider messages={messages}>
+              <NextAuthProvider>
+                <AppProvider>
+                  <PublicHeader />
+                  {children}
+                </AppProvider>
+              </NextAuthProvider>
+            </NextIntlClientProvider>
+          </MuiProvider>
+        </body>
+      </LocalizationProviderWrapper>
     </html>
   );
 }
