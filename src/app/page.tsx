@@ -1,5 +1,6 @@
 import { AppHeader } from '@/components/headers/app-header';
 import { SigninForm } from '@/features/auth/components';
+import { AuthGuardProvider } from '@/features/auth/providers';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { useTranslations } from 'next-intl';
@@ -9,7 +10,7 @@ export default function RootPage() {
   const t = useTranslations('Home');
 
   return (
-    <>
+    <AuthGuardProvider>
       <AppHeader />
 
       <Box
@@ -47,6 +48,6 @@ export default function RootPage() {
           <SigninForm />
         </Box>
       </Box>
-    </>
+    </AuthGuardProvider>
   );
 }
