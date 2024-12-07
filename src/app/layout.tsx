@@ -6,6 +6,7 @@ import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
+import LocalizationProviderWrapper from '@/components/localizationprovider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
