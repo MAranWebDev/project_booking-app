@@ -1,6 +1,7 @@
 'use client';
 
 import { AuthFormLayout } from '@/components/layouts/auth-form-layout';
+import { ROUTES } from '@/constants/routes';
 import { usersZodSignin, UsersZodSignin } from '@/libs/zod/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Button from '@mui/material/Button';
@@ -34,7 +35,7 @@ export const SigninForm = () => {
       redirect: false,
     });
 
-    if (res?.ok) return router.push('/dashboard/profile');
+    if (res?.ok) return router.push(ROUTES.DASHBOARD_PROFILE);
   };
 
   return (

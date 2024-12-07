@@ -1,6 +1,7 @@
 'use client';
 
 import { AuthFormLayout } from '@/components/layouts/auth-form-layout';
+import { ROUTES } from '@/constants/routes';
 import { usersZodSignup, UsersZodSignup } from '@/libs/zod/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Button from '@mui/material/Button';
@@ -10,9 +11,6 @@ import { signIn } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
-
-// Constants
-const ROUTE_PROFILE = '/dashboard/profile';
 
 export const SignupForm = () => {
   const router = useRouter();
@@ -31,7 +29,7 @@ export const SignupForm = () => {
 
   // Utils
   const onSubmit = async ({ name, email, password }: UsersZodSignup) => {
-    const response = await fetch('/api/auth/signup', {
+    const response = await fetch(ROUTES.API_AUTH_SIGNUP, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password }),
@@ -50,7 +48,7 @@ export const SignupForm = () => {
       redirect: false,
     });
 
-    if (res?.ok) return router.push(ROUTE_PROFILE);
+    if (res?.ok) return router.push(ROUTES.DASHBOARD_PROFILE);
   };
 
   return (

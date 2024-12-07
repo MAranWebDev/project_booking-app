@@ -1,5 +1,6 @@
 'use client';
 
+import { ROUTES } from '@/constants/routes';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
@@ -24,7 +25,7 @@ export const AuthFormLayout = ({ children }: PropsWithChildren) => {
 
       {children}
 
-      <Link href="/">
+      <Link href={ROUTES.ROOT}>
         <Button variant="outlined">{t('home')}</Button>
       </Link>
     </Stack>
