@@ -21,16 +21,23 @@ export const AppHeader = async () => {
       <AppBar position="fixed">
         <Toolbar sx={{ width: '90%', mx: 'auto' }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+            <Image src="/images/logo.png" alt="Logo" width={60} height={60} />
+            <LanguageDropdown />
+          </Box>
+
+          <Box sx={{ flexGrow: 1 }} />
+
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             {session ? (
               <>
-                <Link href={ROUTES.DASHBOARD_PROFILE}>{t('profile')}</Link>
                 <Link href={ROUTES.DASHBOARD_SCHEDULE}>{t('schedule')}</Link>
+                <Link href={ROUTES.DASHBOARD_PROFILE}>
+                  <Typography>
+                    <AccountCircleIcon sx={{ marginRight: 0.5 }} />
+                    {session.user?.email}
+                  </Typography>
+                </Link>
                 <SignoutButton />
-
-                <Box sx={{ display: 'flex', gap: 1 }}>
-                  <AccountCircleIcon />
-                  <Typography>{session.user?.email}</Typography>
-                </Box>
               </>
             ) : (
               <>
@@ -44,13 +51,6 @@ export const AppHeader = async () => {
                 </Link>
               </>
             )}
-          </Box>
-
-          <Box sx={{ flexGrow: 1 }} />
-
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            <LanguageDropdown />
-            <Image src="/images/logo.png" alt="Logo" width={60} height={60} />
           </Box>
         </Toolbar>
       </AppBar>

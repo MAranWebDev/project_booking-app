@@ -31,7 +31,7 @@ const handler = NextAuth({
       },
     }),
   ],
-  pages: { signIn: ROUTES.SIGNIN },
+  pages: { signIn: ROUTES.ROOT },
   session: { strategy: 'jwt' },
   callbacks: {
     async jwt({ token, user }) {
