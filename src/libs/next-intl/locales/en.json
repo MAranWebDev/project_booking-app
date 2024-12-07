@@ -14,7 +14,8 @@
     "signin": "Sign in",
     "signup": "Sign up",
     "profile": "Profile",
-    "schedule": "Schedule"
+    "schedule": "Schedule",
+    "submit": "Submit"
   },
   "Auth": {
     "signup": "Sign up",
@@ -23,5 +24,6 @@
     "name": "Name",
     "email": "Email",
     "password": "Password"
-  }
+  },
+  "Actions": {}
 }

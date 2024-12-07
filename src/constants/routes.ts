@@ -8,6 +8,7 @@ export const ROUTES = {
   DASHBOARD_SCHEDULE: '/dashboard/schedule',
   API_ROOT: '/api',
   API_AUTH_SIGNUP: '/api/auth/signup',
+  API_SCHEDULE: '/api/schedule',
 } as const;
 
 // Exported types

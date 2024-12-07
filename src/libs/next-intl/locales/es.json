@@ -14,7 +14,8 @@
     "signup": "Registrarse",
     "signin": "Iniciar sesión",
     "profile": "Perfil",
-    "schedule": "Agendar"
+    "schedule": "Agendar",
+    "submit": "Enviar"
   },
   "Auth": {
     "signup": "Registrarse",
@@ -23,5 +24,6 @@
     "name": "Nombre",
     "email": "Email",
     "password": "Contraseña"
-  }
+  },
+  "Actions": {}
 }
