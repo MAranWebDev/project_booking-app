@@ -4,12 +4,16 @@ import Button from '@mui/material/Button';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { Dayjs } from 'dayjs';
+import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
-export function BookingPage() {
+export default function SchedulePage() {
   const [selectedDate, setSelectedDate] = useState<Dayjs | null>(null);
   const [selectedTime, setSelectedTime] = useState<Dayjs | null>(null);
   const [mounted, setMounted] = useState(false);
+
+  // "next-intl"
+  const t = useTranslations('Navbar');
 
   useEffect(() => {
     setMounted(true);
@@ -19,7 +23,7 @@ export function BookingPage() {
 
   return (
     <div>
-      <h1>Calendar</h1>
+      <h1>{t('schedule')}</h1>
       <div>
         <DateCalendar
           disablePast

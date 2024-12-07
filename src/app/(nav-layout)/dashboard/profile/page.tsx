@@ -1,16 +1,20 @@
 'use client';
 
-import { SignoutButton } from '@/components/buttons/signout-button';
+import Typography from '@mui/material/Typography';
 import { useSession } from 'next-auth/react';
+import { useTranslations } from 'next-intl';
 
 export default function ProfilePage() {
+  // "next-auth"
   const { data, status } = useSession();
+
+  // "next-intl"
+  const t = useTranslations('Navbar');
 
   return (
     <main>
-      <h1>Bienvenido Profile</h1>
+      <Typography>{t('profile')}</Typography>
       <pre>{JSON.stringify({ data, status }, null, 2)}</pre>
-      <SignoutButton />
     </main>
   );
 }

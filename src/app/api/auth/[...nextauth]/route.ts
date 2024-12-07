@@ -1,3 +1,4 @@
+import { ROUTES } from '@/constants/routes';
 import { dbConnect } from '@/libs/mongoose/db-connect';
 import { User } from '@/libs/mongoose/models';
 import bcrypt from 'bcryptjs';
@@ -30,7 +31,7 @@ const handler = NextAuth({
       },
     }),
   ],
-  pages: { signIn: '/signin' },
+  pages: { signIn: ROUTES.SIGNIN },
   session: { strategy: 'jwt' },
   callbacks: {
     async jwt({ token, user }) {

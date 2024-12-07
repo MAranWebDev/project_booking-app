@@ -1,9 +1,12 @@
 import { SignoutButton } from '@/components/buttons/signout-button';
 import { LanguageDropdown } from '@/components/dropdowns/language-dropdown';
+import { ROUTES } from '@/constants/routes';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 import { getServerSession } from 'next-auth';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
@@ -20,16 +23,21 @@ export const AppHeader = async () => {
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             {session ? (
               <>
-                <Link href="/profile">{t('profile')}</Link>
-                <Link href="/schedule">{t('schedule')}</Link>
+                <Link href={ROUTES.DASHBOARD_PROFILE}>{t('profile')}</Link>
+                <Link href={ROUTES.DASHBOARD_SCHEDULE}>{t('schedule')}</Link>
                 <SignoutButton />
+
+                <Box sx={{ display: 'flex', gap: 1 }}>
+                  <AccountCircleIcon />
+                  <Typography>{session.user?.email}</Typography>
+                </Box>
               </>
             ) : (
               <>
-                <Link href="/">{t('home')}</Link>
-                <Link href="/about">{t('about')}</Link>
-                <Link href="/signin">{t('signin')}</Link>
-                <Link href="/signup">
+                <Link href={ROUTES.ROOT}>{t('home')}</Link>
+                <Link href={ROUTES.ABOUT}>{t('about')}</Link>
+                <Link href={ROUTES.SIGNIN}>{t('signin')}</Link>
+                <Link href={ROUTES.SIGNUP}>
                   <Button variant="outlined" color="inherit">
                     {t('signup')}
                   </Button>
