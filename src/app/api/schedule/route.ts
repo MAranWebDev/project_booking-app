@@ -1,19 +1,25 @@
-import { NextRequest, NextResponse } from 'next/server';
 import { dbConnect } from '@/libs/mongoose/db-connect';
 import { Schedule } from '@/libs/mongoose/models';
+import { getToken } from 'next-auth/jwt';
+import { NextRequest, NextResponse } from 'next/server';
 
 export const POST = async (req: NextRequest) => {
-  const body = await req.json();
+  // Token guard
+  const token = await getToken({ req });
+  if (!token)
+    return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
 
-  const { date, time, doctor } = body;
+  // Body
+  const body = await req.json();
+  const { date, time, doctorId } = body;
 
   // Connect to database
   await dbConnect();
 
   const schedule = await Schedule.create({
-    selectedDate: date,
-    selectedTime: time,
-    selectedDoctor: doctor,
+    date,
+    time,
+    doctorId,
   });
 
   return NextResponse.json(schedule, { status: 201 });

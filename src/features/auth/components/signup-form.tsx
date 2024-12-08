@@ -1,7 +1,7 @@
 'use client';
 
 import { ROUTES } from '@/constants/routes';
-import { usersZodSignup, UsersZodSignup } from '@/libs/zod/schemas';
+import { userZodSignup, UserZodSignup } from '@/libs/zod/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
@@ -23,12 +23,12 @@ export const SignupForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<UsersZodSignup>({
-    resolver: zodResolver(usersZodSignup),
+  } = useForm<UserZodSignup>({
+    resolver: zodResolver(userZodSignup),
   });
 
   // Utils
-  const onSubmit = async ({ name, email, password }: UsersZodSignup) => {
+  const onSubmit = async ({ name, email, password }: UserZodSignup) => {
     const response = await fetch(ROUTES.API_AUTH_SIGNUP, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

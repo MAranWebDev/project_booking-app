@@ -1,7 +1,7 @@
 'use client';
 
 import { ROUTES } from '@/constants/routes';
-import { usersZodSignin, UsersZodSignin } from '@/libs/zod/schemas';
+import { userZodSignin, UserZodSignin } from '@/libs/zod/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
@@ -23,12 +23,12 @@ export const SigninForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<UsersZodSignin>({
-    resolver: zodResolver(usersZodSignin),
+  } = useForm<UserZodSignin>({
+    resolver: zodResolver(userZodSignin),
   });
 
   // Utils
-  const onSubmit = async ({ email, password }: UsersZodSignin) => {
+  const onSubmit = async ({ email, password }: UserZodSignin) => {
     const res = await signIn('credentials', {
       email,
       password,
