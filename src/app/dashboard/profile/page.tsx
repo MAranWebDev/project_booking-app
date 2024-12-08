@@ -1,5 +1,6 @@
 'use client';
 
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { useSession } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
@@ -12,9 +13,9 @@ export default function ProfilePage() {
   const t = useTranslations('Navbar');
 
   return (
-    <main>
+    <Box component="main">
       <Typography>{t('profile')}</Typography>
       <pre>{JSON.stringify({ data, status }, null, 2)}</pre>
-    </main>
+    </Box>
   );
 }

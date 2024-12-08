@@ -1,4 +1,4 @@
-import { AuthGuardProvider } from '@/features/auth/providers';
+import { AppHeader } from '@/components/headers/app-header';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { useTranslations } from 'next-intl';
@@ -8,7 +8,9 @@ export default function AboutPage() {
   const t = useTranslations('Navbar');
 
   return (
-    <AuthGuardProvider>
+    <>
+      <AppHeader />
+
       <Box sx={{ width: '90%', mx: 'auto' }} component="main">
         <Typography sx={{ p: 1 }} component="h1" variant="h4">
           {t('about')}
@@ -27,6 +29,6 @@ export default function AboutPage() {
           magni praesentium accusamus soluta.
         </Typography>
       </Box>
-    </AuthGuardProvider>
+    </>
   );
 }

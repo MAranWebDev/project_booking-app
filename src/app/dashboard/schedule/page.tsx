@@ -55,7 +55,7 @@ export default function SchedulePage() {
   };
 
   return (
-    <Box sx={{ width: '90%', mx: 'auto', mt: 2 }}>
+    <Box sx={{ width: '90%', mx: 'auto', mt: 2 }} component="main">
       <Typography component="h1" variant="h4">
         {t('schedule')}
       </Typography>
