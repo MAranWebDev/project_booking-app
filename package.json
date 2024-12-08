@@ -19,7 +19,6 @@
     "@mui/icons-material": "^6.1.10",
     "@mui/material": "^6.1.10",
     "@mui/material-nextjs": "^6.1.9",
-    "@mui/x-data-grid": "^7.23.1",
     "@mui/x-date-pickers": "^7.23.1",
     "bcryptjs": "^2.4.3",
     "dayjs": "^1.11.13",
