@@ -1,6 +1,6 @@
 import { AppHeader } from '@/components/headers/app-header';
+import { AuthGuardProvider } from '@/features/auth/auth-guard-provider';
 import { SigninForm } from '@/features/auth/components';
-import { AuthGuardProvider } from '@/features/auth/providers';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { useTranslations } from 'next-intl';

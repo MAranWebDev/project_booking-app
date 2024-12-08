@@ -1,4 +1,4 @@
-import { AuthGuardProvider } from '@/features/auth/providers';
+import { AuthGuardProvider } from '@/features/auth/auth-guard-provider';
 import { PropsWithChildren } from 'react';
 
 export default function PublicLayout({ children }: PropsWithChildren) {

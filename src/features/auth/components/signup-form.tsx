@@ -1,6 +1,5 @@
 'use client';
 
-import { AuthFormLayout } from '@/components/layouts/auth-form-layout';
 import { ROUTES } from '@/constants/routes';
 import { usersZodSignup, UsersZodSignup } from '@/libs/zod/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -11,6 +10,7 @@ import { signIn } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
+import { AuthFormLayout } from './layouts/auth-form-layout';
 
 export const SignupForm = () => {
   const router = useRouter();

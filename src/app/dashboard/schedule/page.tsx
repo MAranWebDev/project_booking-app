@@ -59,6 +59,7 @@ export default function SchedulePage() {
       <Typography component="h1" variant="h4">
         {t('schedule')}
       </Typography>
+
       <Stack sx={{ width: 400, mx: 'auto' }} spacing={2}>
         <DateCalendar
           disablePast
