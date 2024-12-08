@@ -4,6 +4,7 @@ import createNextIntlPlugin from 'next-intl/plugin';
 // Constants
 const REQUEST_PATH = './src/libs/next-intl/request.ts';
 
+// "next-intl"
 const withNextIntl = createNextIntlPlugin(REQUEST_PATH);
 
 const nextConfig: NextConfig = {

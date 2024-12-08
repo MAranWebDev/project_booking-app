@@ -1,7 +1,7 @@
 'use client';
 
+import { DOCTORS } from '@/constants/doctors';
 import { ROUTES } from '@/constants/routes';
-import { doctors } from '@/data/doctors';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
@@ -77,8 +77,8 @@ export default function SchedulePage() {
             setSelectedDoctor(event.target.value as string);
           }}
         >
-          <MenuItem value={doctors[0].name}>{doctors[0].name}</MenuItem>
-          <MenuItem value={doctors[1].name}>{doctors[1].name}</MenuItem>
+          <MenuItem value={DOCTORS[0].name}>{DOCTORS[0].name}</MenuItem>
+          <MenuItem value={DOCTORS[1].name}>{DOCTORS[1].name}</MenuItem>
         </Select>
         <Button variant="outlined" onClick={handleSchedule}>
           {t('submit')}

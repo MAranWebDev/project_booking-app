@@ -34,26 +34,25 @@ npm run dev
 
 ## Requerimientos
 
-1. (ok) - Responsive Design: Móvil/Tablet/Desktop, respetando material design
-2. (ok) - Traducciones: Idiomas inglés/español
-3. (ok) - Local Storage: Almacenar info usuario como nombre y idioma
+1. Responsive Design: Móvil/Tablet/Desktop, respetando material design
+2. Traducciones: Idiomas inglés/español
+3. Local Storage: Almacenar info usuario como nombre y idioma
 4. Usuarios:
-   (ok) - Registrar usuarios.
-   (ok) - Validar contraseña.
-   (ok) - Utilizar variables de entorno .env.
-   (ok) - Una páquina bloqueada para usuarios autenticados.
-   (ok) - Contraseña hasheada en db.
-   (ok) - Api que se logre conectar a la base de datos.
-5. (ok) - Validaciones: En todos los campos de formularios + mensajes de error.
+   - Registrar usuarios.
+   - Validar contraseña.
+   - Utilizar variables de entorno .env.
+   - Una páquina bloqueada para usuarios autenticados.
+   - Contraseña hasheada en db.
+   - Api que se logre conectar a la base de datos.
+5. Validaciones: En todos los campos de formularios + mensajes de error.
 6. Funcionalidad adicionales:
-   (pendiente) - Carga de datos.
-   (pendiente) - Visualización de datos.
+   - Carga de datos.
+   - Visualización de datos.
 
 ## Technologies
 
 **Installers**
 
-- google chrome: https://www.google.com/chrome/
 - node: https://nodejs.org/en
 - git | git bash | github: https://git-scm.com/downloads
 - docker desktop: https://www.docker.com/products/docker-desktop/
@@ -68,21 +67,21 @@ npm run dev
 
 **Tech Stack**
 
-- next.js: Framework full stack.
 - typescript: Lenguaje de programación
-- mongodb: Base de datos
 - prettier: Identador y formateador de código.
 - eslint: Linter, detecta errores.
-- mui: Framework UI.
-- mui-x-date-pickers: Calendario.
-- notistack: Notificaciones.
-- react-hook-form: Manipulación de formularios.
-- hookform/resolvers: Conector entre react-hook-form y zod.
-- zod: Validaciones cliente y servidor.
-- next-intl: Traducciones de next.js.
+- next.js: Framework full stack.
 - next-auth: Autenticación de next.js.
-- bcryptjs: Encriptador de contraseñas de next.js.
-- mongoose: ORM para interactuar con mongodb.
+  - bcryptjs: Encriptador de contraseñas de next.js.
+- next-intl: Traducciones de next.js.
+- react-hook-form: Manipulación de formularios.
+  - hookform/resolvers: Conector entre react-hook-form y zod.
+- zod: Validaciones cliente y servidor.
+- mongodb: Base de datos
+  - mongoose: ORM para interactuar con mongodb.
+- mui: Framework UI.
+  - mui-x-date-pickers: Calendario.
+  - notistack: Notificaciones.
 
 **Tutorials**
 
@@ -94,9 +93,3 @@ npm run dev
 - Validaciones servidor (zod): https://zod.dev/?id=parse
 - Autenticación y db (next-auth): https://www.youtube.com/watch?v=w9l7vUWzw1I
 - Agendamiento: https://www.youtube.com/watch?v=ny9T62gqrWg
-
-## Others
-
-- add notifications
-- add schedule endpoint
-- review translations
