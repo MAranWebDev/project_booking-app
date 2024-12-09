@@ -1,29 +1,25 @@
 {
-  "Language": {
+  "doctors": "Doctors",
+  "language": {
     "label": "Language",
     "en": "English",
     "es": "Español"
   },
-  "Home": {
-    "contactMessage": "Need to talk?",
-    "helpMessage": "Help guide"
-  },
-  "Navbar": {
+  "pages": {
     "home": "Home",
     "about": "About",
-    "signin": "Sign in",
-    "signup": "Sign up",
     "profile": "Profile",
-    "schedule": "Schedule",
-    "submit": "Submit"
+    "schedule": "Schedule"
   },
-  "Auth": {
+  "actions": {
+    "submit": "Submit",
     "signup": "Sign up",
     "signin": "Sign in",
-    "signout": "Sign out",
+    "signout": "Sign out"
+  },
+  "data": {
     "name": "Name",
     "email": "Email",
     "password": "Password"
-  },
-  "Actions": {}
+  }
 }

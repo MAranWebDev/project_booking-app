@@ -1,29 +1,25 @@
 {
-  "Language": {
+  "doctors": "Doctores",
+  "language": {
     "label": "Idioma",
     "en": "English",
     "es": "Español"
   },
-  "Home": {
-    "contactMessage": "¿Necesitas hablar?",
-    "helpMessage": "Guía de ayuda"
-  },
-  "Navbar": {
+  "pages": {
     "home": "Inicio",
     "about": "Quiénes somos",
-    "signup": "Registrarse",
-    "signin": "Iniciar sesión",
     "profile": "Perfil",
-    "schedule": "Agendar",
-    "submit": "Enviar"
+    "schedule": "Agendar"
   },
-  "Auth": {
+  "actions": {
+    "submit": "Enviar",
     "signup": "Registrarse",
     "signin": "Iniciar sesión",
-    "signout": "Cerrar sesión",
+    "signout": "Cerrar sesión"
+  },
+  "data": {
     "name": "Nombre",
     "email": "Email",
     "password": "Contraseña"
-  },
-  "Actions": {}
+  }
 }
