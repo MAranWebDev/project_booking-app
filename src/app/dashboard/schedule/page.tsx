@@ -21,7 +21,7 @@ export default function SchedulePage() {
   const [selectedDoctor, setSelectedDoctor] = useState<string>('');
 
   // "next-intl"
-  const t = useTranslations('Navbar');
+  const t = useTranslations();
 
   // Utils
 
@@ -81,6 +81,7 @@ export default function SchedulePage() {
           <MenuItem value={DOCTORS[0].name}>{DOCTORS[0].name}</MenuItem>
           <MenuItem value={DOCTORS[1].name}>{DOCTORS[1].name}</MenuItem>
         </Select>
+
         <Button variant="outlined" onClick={handleSchedule}>
           {t('submit')}
         </Button>

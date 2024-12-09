@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 
 export default function AboutPage() {
   // "next-intl"
-  const t = useTranslations('Navbar');
+  const t = useTranslations();
 
   return (
     <>

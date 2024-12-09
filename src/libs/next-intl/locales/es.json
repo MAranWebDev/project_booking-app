@@ -1,25 +1,17 @@
 {
+  "about": "Quiénes somos",
   "doctors": "Doctores",
-  "language": {
-    "label": "Idioma",
-    "en": "English",
-    "es": "Español"
-  },
-  "pages": {
-    "home": "Inicio",
-    "about": "Quiénes somos",
-    "profile": "Perfil",
-    "schedule": "Agendar"
-  },
-  "actions": {
-    "submit": "Enviar",
-    "signup": "Registrarse",
-    "signin": "Iniciar sesión",
-    "signout": "Cerrar sesión"
-  },
-  "data": {
-    "name": "Nombre",
-    "email": "Email",
-    "password": "Contraseña"
-  }
+  "email": "Email",
+  "english": "English",
+  "home": "Inicio",
+  "language": "Idioma",
+  "name": "Nombre",
+  "password": "Contraseña",
+  "profile": "Perfil",
+  "schedule": "Agendar",
+  "signin": "Iniciar sesión",
+  "signout": "Cerrar sesión",
+  "signup": "Registrarse",
+  "spanish": "Español",
+  "submit": "Enviar"
 }

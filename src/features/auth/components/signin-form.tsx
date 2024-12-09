@@ -16,7 +16,7 @@ export const SigninForm = () => {
   const router = useRouter();
 
   // "next-intl"
-  const t = useTranslations('Auth');
+  const t = useTranslations();
 
   // "react-hook-form"
   const {

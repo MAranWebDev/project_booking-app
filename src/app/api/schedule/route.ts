@@ -1,5 +1,6 @@
 import { dbConnect } from '@/libs/mongoose/db-connect';
 import { Schedule } from '@/libs/mongoose/models';
+import { scheduleZodCreate } from '@/libs/zod/schemas';
 import { getToken } from 'next-auth/jwt';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -9,9 +10,16 @@ export const POST = async (req: NextRequest) => {
   if (!token)
     return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
 
-  // Body
+  // Validations guard
   const body = await req.json();
-  const { date, time, doctorId } = body;
+  const parsedBody = scheduleZodCreate.safeParse(body);
+  if (!parsedBody.success)
+    return NextResponse.json(
+      { message: 'Validation failed', errors: parsedBody.error.flatten() },
+      { status: 400 },
+    );
+
+  const { date, time, doctorId } = parsedBody.data;
 
   // Connect to database
   await dbConnect();

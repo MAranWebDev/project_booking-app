@@ -10,7 +10,7 @@ export default function ProfilePage() {
   const { data, status } = useSession();
 
   // "next-intl"
-  const t = useTranslations('Navbar');
+  const t = useTranslations();
 
   return (
     <Box component="main">
