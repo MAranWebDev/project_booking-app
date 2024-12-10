@@ -27,15 +27,15 @@ export const POST = async (req: NextRequest) => {
     await dbConnect();
 
     // Get user
-    const userFound = await User.findOne({ email: token.email });
-    if (!userFound)
+    const userExists = await User.findOne({ email: token.email });
+    if (!userExists)
       return NextResponse.json(
         { message: 'User not found. Please try again.' },
         { status: 404 },
       );
 
     const scheduleFound = await Schedule.exists({ date, time, doctorId });
-    if (!scheduleFound)
+    if (scheduleFound)
       return NextResponse.json(
         { message: 'The selected date and time is unavailable.' },
         { status: 409 },
@@ -45,7 +45,7 @@ export const POST = async (req: NextRequest) => {
       date,
       time,
       doctorId,
-      userId: userFound._id,
+      userId: userExists._id,
     });
 
     return NextResponse.json(schedule, { status: 201 });

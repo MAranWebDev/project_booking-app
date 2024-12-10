@@ -14,5 +14,8 @@
   "signup": "Registrarse",
   "spanish": "Español",
   "submit": "Enviar",
-  "emptyFieldsMessage": "Por favor complete todos los campos"
+  "messageSuccess": "Registro creado exitosamente",
+  "messageSomethingWentWrong": "Algo salió mal",
+  "messageServerError": "Error de servidor",
+  "messageEmptyFields": "Por favor complete todos los campos"
 }

@@ -27,29 +27,32 @@ export default function SchedulePage() {
 
   // Utils
   const handleClickSubmit = async () => {
-    if (date && time && doctorId) {
-      try {
-        await fetch(ROUTES.API_SCHEDULE, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            date: dayjs(date).format('YYYY-MM-DD'),
-            time: dayjs(time).format('HH:mm'),
-            doctorId,
-          }),
-        });
+    if (!date || !time || !doctorId)
+      return enqueueSnackbar(t('messageEmptyFields'), { variant: 'error' });
 
-        enqueueSnackbar('success', { variant: 'success' });
-      } catch (error) {
-        console.error(error);
-        enqueueSnackbar('error', { variant: 'error' });
-      }
+    try {
+      const response = await fetch(ROUTES.API_SCHEDULE, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          date: dayjs(date).format('YYYY-MM-DD'),
+          time: dayjs(time).format('HH:mm'),
+          doctorId,
+        }),
+      });
 
+      const message = response.ok
+        ? t('messageSuccess')
+        : `${t('messageServerError')}: ${(await response.json()).message}` ||
+          t('messageSomethingWentWrong');
+
+      enqueueSnackbar(message, { variant: response.ok ? 'success' : 'error' });
+    } catch {
+      enqueueSnackbar(t('messageSomethingWentWrong'), { variant: 'error' });
+    } finally {
       setDate(null);
       setTime(null);
       setDoctorId('');
-    } else {
-      enqueueSnackbar(t('emptyFieldsMessage'), { variant: 'error' });
     }
   };
 

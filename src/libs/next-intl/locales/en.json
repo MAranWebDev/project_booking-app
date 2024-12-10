@@ -14,5 +14,8 @@
   "signup": "Sign up",
   "spanish": "Español",
   "submit": "Submit",
-  "emptyFieldsMessage": "Please fill all the fields"
+  "messageSuccess": "Record created successfully",
+  "messageSomethingWentWrong": "Something went wrong",
+  "messageServerError": "Server error",
+  "messageEmptyFields": "Please fill all the fields"
 }
