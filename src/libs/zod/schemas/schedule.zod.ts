@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
 const date = z.string().date();
-const time = z.string().time();
-const doctorId = z.string();
+const time = z.string().min(1);
+const doctorId = z.string().min(1).max(10);
 
 // Exported schemas
 export const scheduleZodCreate = z.object({ date, time, doctorId });

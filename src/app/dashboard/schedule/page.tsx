@@ -51,12 +51,6 @@ export default function SchedulePage() {
     }
   };
 
-  const isAvailableTime = (time, clockType) => {
-    // Example: Disable times before 9 AM (hours 0-8)
-    if (clockType === 'hours' && time < 9) return true;
-    return false;
-  };
-
   return (
     <Box sx={{ width: '90%', mx: 'auto', mt: 2 }} component="main">
       <Typography component="h1" variant="h4">
@@ -75,7 +69,6 @@ export default function SchedulePage() {
           views={['hours']}
           value={time}
           onChange={(newTime) => setTime(newTime)}
-          shouldDisableTime={isAvailableTime}
           ampm={false}
         />
 
