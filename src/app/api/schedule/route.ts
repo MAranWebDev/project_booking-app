@@ -12,9 +12,6 @@ export const POST = async (req: NextRequest) => {
     if (!token)
       return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
 
-    // Check if user exists
-    const user = await User.findOne({ email: token.email });
-
     // // Validations guard
     const body = await req.json();
     const parsedBody = scheduleZodCreate.safeParse(body);
@@ -29,11 +26,26 @@ export const POST = async (req: NextRequest) => {
     // Connect to database
     await dbConnect();
 
+    // Get user
+    const userFound = await User.findOne({ email: token.email });
+    if (!userFound)
+      return NextResponse.json(
+        { message: 'User not found. Please try again.' },
+        { status: 404 },
+      );
+
+    const scheduleFound = await Schedule.exists({ date, time, doctorId });
+    if (!scheduleFound)
+      return NextResponse.json(
+        { message: 'The selected date and time is unavailable.' },
+        { status: 409 },
+      );
+
     const schedule = await Schedule.create({
       date,
       time,
       doctorId,
-      userId: user._id,
+      userId: userFound._id,
     });
 
     return NextResponse.json(schedule, { status: 201 });
