@@ -18,13 +18,7 @@ const handler = async (req: NextRequest) => {
 
       // Get user
       const userExists = await User.findOne({ email: token.email });
-      if (!userExists)
-        return NextResponse.json(
-          { message: 'User not found. Please try again.' },
-          { status: 404 },
-        );
-
-      const schedules = await Schedule.find({ userId: userExists._id });
+      const schedules = await Schedule.find({ userId: userExists._id || '' });
       return NextResponse.json(schedules, { status: 201 });
     } catch (error) {
       const status =

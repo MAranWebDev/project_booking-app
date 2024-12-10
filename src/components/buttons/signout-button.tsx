@@ -12,7 +12,7 @@ export const SignoutButton = () => {
   const handleClickSignout = () => signOut();
 
   return (
-    <Button variant="outlined" color="inherit" onClick={handleClickSignout}>
+    <Button variant="text" color="inherit" onClick={handleClickSignout}>
       {t('signout')}
     </Button>
   );

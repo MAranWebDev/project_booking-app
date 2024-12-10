@@ -13,12 +13,10 @@ import dayjs from 'dayjs';
 import { DOCTORS } from '@/constants/doctors';
 
 // Types
-type State =
-  | { _id: string; date: Date; time: string; doctorId: string }[]
-  | null;
+type State = { _id: string; date: Date; time: string; doctorId: string }[];
 
 export const ProfileTable = () => {
-  const [data, setData] = useState<State>(null);
+  const [data, setData] = useState<State>([]);
 
   useEffect(() => {
     const fetchData = async () => {

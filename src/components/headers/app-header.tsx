@@ -30,7 +30,11 @@ export const AppHeader = async () => {
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             {session ? (
               <>
-                <Link href={ROUTES.DASHBOARD_SCHEDULE}>{t('schedule')}</Link>
+                <Link href={ROUTES.DASHBOARD_SCHEDULE}>
+                  <Button variant="outlined" color="inherit">
+                    {t('schedule')}
+                  </Button>
+                </Link>
                 <Link href={ROUTES.DASHBOARD_PROFILE}>
                   <Typography>
                     <AccountCircleIcon sx={{ marginRight: 0.5 }} />
