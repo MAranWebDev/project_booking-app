@@ -13,5 +13,6 @@
   "signout": "Cerrar sesión",
   "signup": "Registrarse",
   "spanish": "Español",
-  "submit": "Enviar"
+  "submit": "Enviar",
+  "emptyFieldsMessage": "Por favor complete todos los campos"
 }

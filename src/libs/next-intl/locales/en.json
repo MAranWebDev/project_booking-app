@@ -13,5 +13,6 @@
   "signout": "Sign out",
   "signup": "Sign up",
   "spanish": "Español",
-  "submit": "Submit"
+  "submit": "Submit",
+  "emptyFieldsMessage": "Please fill all the fields"
 }

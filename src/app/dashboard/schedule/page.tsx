@@ -48,6 +48,8 @@ export default function SchedulePage() {
       setDate(null);
       setTime(null);
       setDoctorId('');
+    } else {
+      enqueueSnackbar(t('emptyFieldsMessage'), { variant: 'error' });
     }
   };
 
