@@ -1,6 +1,6 @@
 import { dbConnect } from '@/libs/mongoose/db-connect';
 import { User } from '@/libs/mongoose/models';
-import { usersZodSignup } from '@/libs/zod/schemas';
+import { userZodSignup } from '@/libs/zod/schemas';
 import bcrypt from 'bcryptjs';
 import mongoose from 'mongoose';
 import { NextRequest, NextResponse } from 'next/server';
@@ -10,7 +10,7 @@ export const POST = async (req: NextRequest) => {
     const body = await req.json();
 
     // Validate request body
-    const parsedBody = usersZodSignup.safeParse(body);
+    const parsedBody = userZodSignup.safeParse(body);
     if (!parsedBody.success)
       return NextResponse.json(
         { message: 'Validation failed', errors: parsedBody.error.flatten() },

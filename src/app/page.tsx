@@ -1,14 +1,9 @@
 import { AppHeader } from '@/components/headers/app-header';
+import { AuthGuardProvider } from '@/features/auth/auth-guard-provider';
 import { SigninForm } from '@/features/auth/components';
-import { AuthGuardProvider } from '@/features/auth/providers';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import { useTranslations } from 'next-intl';
 
 export default function RootPage() {
-  // "next-intl"
-  const t = useTranslations('Home');
-
   return (
     <AuthGuardProvider>
       <AppHeader />
@@ -26,23 +21,7 @@ export default function RootPage() {
           backgroundSize: 'cover',
         }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'end',
-            flexGrow: 1,
-            gap: 2,
-            p: 2,
-          }}
-        >
-          <Button sx={{ backgroundColor: 'transparent' }} variant="contained">
-            {t('contactMessage')}
-          </Button>
-          <Button sx={{ backgroundColor: 'transparent' }} variant="contained">
-            {t('helpMessage')}
-          </Button>
-        </Box>
+        <Box sx={{ flexGrow: 1 }} />
 
         <Box sx={{ display: 'flex', alignItems: 'start', p: 2 }}>
           <SigninForm />

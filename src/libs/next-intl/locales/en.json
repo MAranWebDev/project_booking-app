@@ -1,29 +1,17 @@
 {
-  "Language": {
-    "label": "Language",
-    "en": "English",
-    "es": "Español"
-  },
-  "Home": {
-    "contactMessage": "Need to talk?",
-    "helpMessage": "Help guide"
-  },
-  "Navbar": {
-    "home": "Home",
-    "about": "About",
-    "signin": "Sign in",
-    "signup": "Sign up",
-    "profile": "Profile",
-    "schedule": "Schedule",
-    "submit": "Submit"
-  },
-  "Auth": {
-    "signup": "Sign up",
-    "signin": "Sign in",
-    "signout": "Sign out",
-    "name": "Name",
-    "email": "Email",
-    "password": "Password"
-  },
-  "Actions": {}
+  "about": "About",
+  "doctors": "Doctors",
+  "email": "Email",
+  "english": "English",
+  "home": "Home",
+  "language": "Language",
+  "name": "Name",
+  "password": "Password",
+  "profile": "Profile",
+  "schedule": "Schedule",
+  "signin": "Sign in",
+  "signout": "Sign out",
+  "signup": "Sign up",
+  "spanish": "Español",
+  "submit": "Submit"
 }

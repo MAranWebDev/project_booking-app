@@ -1,8 +1,7 @@
 'use client';
 
-import { AuthFormLayout } from '@/components/layouts/auth-form-layout';
 import { ROUTES } from '@/constants/routes';
-import { usersZodSignup, UsersZodSignup } from '@/libs/zod/schemas';
+import { userZodSignup, UserZodSignup } from '@/libs/zod/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
@@ -11,24 +10,25 @@ import { signIn } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
+import { AuthFormLayout } from './layouts/auth-form-layout';
 
 export const SignupForm = () => {
   const router = useRouter();
 
   // "next-intl"
-  const t = useTranslations('Auth');
+  const t = useTranslations();
 
   // "react-hook-form"
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<UsersZodSignup>({
-    resolver: zodResolver(usersZodSignup),
+  } = useForm<UserZodSignup>({
+    resolver: zodResolver(userZodSignup),
   });
 
   // Utils
-  const onSubmit = async ({ name, email, password }: UsersZodSignup) => {
+  const onSubmit = async ({ name, email, password }: UserZodSignup) => {
     const response = await fetch(ROUTES.API_AUTH_SIGNUP, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

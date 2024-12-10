@@ -1,8 +1,7 @@
 'use client';
 
-import { AuthFormLayout } from '@/components/layouts/auth-form-layout';
 import { ROUTES } from '@/constants/routes';
-import { usersZodSignin, UsersZodSignin } from '@/libs/zod/schemas';
+import { userZodSignin, UserZodSignin } from '@/libs/zod/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
@@ -11,24 +10,25 @@ import { signIn } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
+import { AuthFormLayout } from './layouts/auth-form-layout';
 
 export const SigninForm = () => {
   const router = useRouter();
 
   // "next-intl"
-  const t = useTranslations('Auth');
+  const t = useTranslations();
 
   // "react-hook-form"
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<UsersZodSignin>({
-    resolver: zodResolver(usersZodSignin),
+  } = useForm<UserZodSignin>({
+    resolver: zodResolver(userZodSignin),
   });
 
   // Utils
-  const onSubmit = async ({ email, password }: UsersZodSignin) => {
+  const onSubmit = async ({ email, password }: UserZodSignin) => {
     const res = await signIn('credentials', {
       email,
       password,

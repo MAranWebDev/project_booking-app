@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 
 export const SignoutButton = () => {
   // "next-intl"
-  const t = useTranslations('Auth');
+  const t = useTranslations();
 
   // Utils
   const handleClickSignout = () => signOut();

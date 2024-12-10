@@ -1,1 +1,2 @@
-export * from './users.zod';
+export * from './schedule.zod';
+export * from './user.zod';

@@ -14,7 +14,7 @@ import Link from 'next/link';
 
 export const AppHeader = async () => {
   const session = await getServerSession();
-  const t = await getTranslations('Navbar');
+  const t = await getTranslations();
 
   return (
     <header>

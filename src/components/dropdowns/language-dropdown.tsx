@@ -9,12 +9,12 @@ import { useLocale, useTranslations } from 'next-intl';
 
 export const LanguageDropdown = () => {
   // "next-intl"
-  const t = useTranslations('Language');
+  const t = useTranslations();
   const currentLocale = useLocale();
 
   const languages = [
-    { value: LOCALES.EN, label: t('en') },
-    { value: LOCALES.ES, label: t('es') },
+    { value: LOCALES.EN, label: t('english') },
+    { value: LOCALES.ES, label: t('spanish') },
   ];
 
   // Utils
@@ -27,7 +27,7 @@ export const LanguageDropdown = () => {
         id="select"
         value={currentLocale}
         onChange={handleChange}
-        label={t('label')}
+        label={t('language')}
         sx={{
           color: 'inherit',
           '.MuiOutlinedInput-notchedOutline': { borderColor: 'inherit' },
