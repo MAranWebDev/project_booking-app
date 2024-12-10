@@ -12,10 +12,14 @@ export default function ProfilePage() {
   // "next-intl"
   const t = useTranslations();
 
+  // Log session data
+  console.log(JSON.stringify({ data, status }, null, 2));
+
   return (
-    <Box component="main">
-      <Typography>{t('profile')}</Typography>
-      <pre>{JSON.stringify({ data, status }, null, 2)}</pre>
+    <Box sx={{ width: '90%', mx: 'auto', mt: 2 }} component="main">
+      <Typography component="h1" variant="h4">
+        {t('profile')}
+      </Typography>
     </Box>
   );
 }

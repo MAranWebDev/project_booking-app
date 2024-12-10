@@ -12,7 +12,8 @@ export default function SchedulePage() {
       <Typography component="h1" variant="h4">
         {t('schedule')}
       </Typography>
-      <ScheduleForm />{' '}
+
+      <ScheduleForm />
     </Box>
   );
 }
