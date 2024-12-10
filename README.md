@@ -30,7 +30,7 @@ npm run dev
 
 - Client: http://localhost:3000/
 - Api: http://localhost:3000/api
-- Mongo Express (GUI): http://localhost:8181
+- Mongo Express (GUI): http://localhost:8081
 
 ## Requerimientos
 

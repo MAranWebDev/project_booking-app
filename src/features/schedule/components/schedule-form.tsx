@@ -63,7 +63,6 @@ export const ScheduleForm = () => {
       />
 
       <TimePicker
-        disablePast
         views={['hours']}
         value={time}
         onChange={(newTime) => setTime(newTime)}
