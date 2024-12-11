@@ -1,5 +1,7 @@
 {
   "about": "About",
+  "date": "Date",
+  "doctor": "Doctor",
   "doctors": "Doctors",
   "email": "Email",
   "english": "English",
@@ -14,8 +16,10 @@
   "signup": "Sign up",
   "spanish": "Español",
   "submit": "Submit",
-  "messageSuccess": "Record created successfully",
-  "messageSomethingWentWrong": "Something went wrong",
+  "time": "Time",
+  "messageEmptyFields": "Please fill all the fields",
   "messageServerError": "Server error",
-  "messageEmptyFields": "Please fill all the fields"
+  "messageSomethingWentWrong": "Something went wrong",
+  "messageSuccess": "Record created successfully",
+  "messageUserNotFound": "User not found"
 }

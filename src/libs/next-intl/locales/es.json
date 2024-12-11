@@ -1,5 +1,7 @@
 {
   "about": "Quiénes somos",
+  "date": "Fecha",
+  "doctor": "Doctor",
   "doctors": "Doctores",
   "email": "Email",
   "english": "English",
@@ -14,8 +16,10 @@
   "signup": "Registrarse",
   "spanish": "Español",
   "submit": "Enviar",
-  "messageSuccess": "Registro creado exitosamente",
-  "messageSomethingWentWrong": "Algo salió mal",
+  "time": "Hora",
+  "messageEmptyFields": "Por favor complete todos los campos",
   "messageServerError": "Error de servidor",
-  "messageEmptyFields": "Por favor complete todos los campos"
+  "messageSomethingWentWrong": "Algo salió mal",
+  "messageSuccess": "Registro creado exitosamente",
+  "messageUserNotFound": "Usuario no encontrado"
 }
