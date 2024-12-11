@@ -11,6 +11,7 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { AuthFormLayout } from './layouts/auth-form-layout';
+import { enqueueSnackbar } from 'notistack';
 
 export const SigninForm = () => {
   const router = useRouter();
@@ -36,6 +37,7 @@ export const SigninForm = () => {
     });
 
     if (res?.ok) return router.push(ROUTES.DASHBOARD_PROFILE);
+    enqueueSnackbar(t('messageUserNotFound'), { variant: 'error' });
   };
 
   return (

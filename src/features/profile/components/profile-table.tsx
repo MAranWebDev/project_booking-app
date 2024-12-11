@@ -11,12 +11,16 @@ import { useEffect, useState } from 'react';
 import { ROUTES } from '@/constants/routes';
 import dayjs from 'dayjs';
 import { DOCTORS } from '@/constants/doctors';
+import { useTranslations } from 'next-intl';
 
 // Types
 type State = { _id: string; date: Date; time: string; doctorId: string }[];
 
 export const ProfileTable = () => {
   const [data, setData] = useState<State>([]);
+
+  // "next-intl"
+  const t = useTranslations();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,9 +37,9 @@ export const ProfileTable = () => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Fecha</TableCell>
-            <TableCell>Hora</TableCell>
-            <TableCell>Doctor</TableCell>
+            <TableCell>{t('date')}</TableCell>
+            <TableCell>{t('time')}</TableCell>
+            <TableCell>{t('doctor')}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
