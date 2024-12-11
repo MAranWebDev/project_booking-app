@@ -25,6 +25,7 @@ export const ProfileTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(ROUTES.API_SCHEDULE);
+      if (!response.ok) return;
       const result = await response.json();
       setData(result);
     };
